@@ -1,0 +1,11 @@
+https://qiita.com/kooohei/items/0e788a2ce8c30f9dba53
+
+作成済みを起動: sudo docker attach a4aeb60621c3
+起動したまま抜ける: ctrl + (P -> Q)
+停止したものを再起動: sudo docker start a4aeb60621c3
+
+確認
+起動中: sudo docker ps
+すべて: sudo docker ps -a
+
+実行: sbt "testOnly tutorialHello.HelloTest"
