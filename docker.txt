@@ -9,3 +9,4 @@ https://qiita.com/kooohei/items/0e788a2ce8c30f9dba53
 すべて: sudo docker ps -a
 
 実行: sbt "testOnly tutorialHello.HelloTest"
+sbt "testOnly decode.HexTest"
