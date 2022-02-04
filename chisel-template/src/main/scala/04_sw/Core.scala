@@ -37,12 +37,22 @@ class Core extends Module {
     val imm_s_sext = Cat(Fill(20, imm_s(11)), imm_s)
 
     val aluOut = MuxCase(0.U(WORD_LEN.W), Seq(
-        (io.imem.inst === LW) -> (rs1Data + imm_i_sext), // LWするメモリのアドレス
-        (io.imem.inst === SW) -> (rs1Data + imm_s_sext) // SWするメモリのアドレス
+        ((io.imem.inst === LW) || (io.imem.inst === ADDI)) -> (rs1Data + imm_i_sext), // LWするメモリのアドレス
+        (io.imem.inst === SW) -> (rs1Data + imm_s_sext), // SWするメモリのアドレス
+        (io.imem.inst === ADD) -> (rs1Data + rs2Data), // ADDするメモリのアドレス
+        (io.imem.inst === SUB) -> (rs1Data - rs2Data), // SUBするメモリのアドレス
+        (io.imem.inst === AND) -> (rs1Data & rs2Data),
+        (io.imem.inst === OR) -> (rs1Data | rs2Data),
+        (io.imem.inst === XOR) -> (rs1Data ^ rs2Data),
+        (io.imem.inst === ANDI) -> (rs1Data & imm_i_sext),
+        (io.imem.inst === ORI) -> (rs1Data | imm_i_sext),
+        (io.imem.inst === XORI) -> (rs1Data ^ imm_i_sext)
     ))
     io.dmem.addr := aluOut // LWやらSWやらするメモリのアドレス
 
-    regFile(rdAddr) := io.dmem.data
+    regFile(rdAddr) := MuxCase(aluOut, Seq( // デフォはALUの結果をレジスタに入れる
+        (io.imem.inst === LW) -> io.dmem.data // LWしたALUのアドレスにあるメモリデータをレジスタに書き込み
+    ))
 
     // SW命令なら書き込み信号などを設定
     when(io.imem.inst === SW){
