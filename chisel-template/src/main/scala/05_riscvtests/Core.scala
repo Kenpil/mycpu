@@ -39,6 +39,12 @@ class Core extends Module {
   val imm_s = Cat(io.imem.inst(31, 25), io.imem.inst(11, 7))
   // 32bitのうちimm_sの先頭bitを20個拡張して，下12個はimm_i
   val imm_s_sext = Cat(Fill(20, imm_s(11)), imm_s)
+  // B形式の即値
+  val imm_b = Cat(io.imem.inst(31), io.imem.inst(7), io.imem.inst(30, 25), io.imem.inst(11, 8))
+  val imm_b_sext = Cat(Fill(19, imm_b(11)), imm_b, 0.U(1.W))
+  // J形式
+  val imm_j = Cat(io.imem.inst(31), io.imem.inst(19, 12), io.imem.inst(20), io.imem.inst(30, 21))
+  val imm_j_sext = Cat(Fill(11, imm_j(19)), imm_j, 0.U(1.W))
 
   val cSignals = ListLookup(io.imem.inst,
     // デフォルト値はALU_X
@@ -71,6 +77,16 @@ class Core extends Module {
       SLTU -> List(ALU_SLTU, rs1Data, rs2Data),
       SLTI -> List(ALU_SLT, rs1Data, imm_i_sext),
       SLTIU -> List(ALU_SLTU, rs1Data, imm_i_sext),
+      // 分岐
+      BEQ -> List(BR_BEQ, rs1Data, rs2Data),
+      BNE -> List(BR_BNE, rs1Data, rs2Data),
+      BLT -> List(BR_BLT, rs1Data, rs2Data),
+      BGE -> List(BR_BGE, rs1Data, rs2Data),
+      BLTU -> List(BR_BLTU, rs1Data, rs2Data),
+      BGEU -> List(BR_BGEU, rs1Data, rs2Data),
+      // ジャンプ
+      JAL -> List(ALU_ADD, pc, imm_j_sext),
+      JALR -> List(ALU_JALR, rs1Data, imm_j_sext),
     )
   )
   // cSignalsのListを左から順番に各要素に代入
@@ -79,7 +95,7 @@ class Core extends Module {
 
   // EXステージ
   /* ******************************** */
-  val aluOut = MuxCase(0.U(WORD_LEN.W), Seq(
+  val aluOut = MuxCase(regFile(rdAddr), Seq(
     (exeFcn === ALU_ADD) -> (op1Data + op2Data),
     (exeFcn === ALU_SUB) -> (op1Data - op2Data),
     (exeFcn === ALU_AND) -> (op1Data & op2Data),
@@ -90,7 +106,15 @@ class Core extends Module {
     (exeFcn === ALU_SRL) -> (op1Data.asUInt() >> op2Data(4, 0)),
     (exeFcn === ALU_SRA) -> (op1Data.asSInt() >> op2Data(4, 0)).asUInt(),
     (exeFcn === ALU_SLT) -> (op1Data.asSInt() < op2Data.asSInt()),
-    (exeFcn === ALU_SLTU) -> (op1Data.asUInt() < op2Data.asUInt())
+    (exeFcn === ALU_SLTU) -> (op1Data.asUInt() < op2Data.asUInt()),
+    // ifがtrueなら左に分岐，falseなら右に分岐
+    (exeFcn === BR_BEQ) -> Mux(op1Data === op2Data, imm_b_sext, 0.U(WORD_LEN.W)),
+    (exeFcn === BR_BNE) -> Mux(op1Data =/= op2Data, imm_b_sext, 0.U(WORD_LEN.W)),
+    (exeFcn === BR_BLT) -> Mux(op1Data < op2Data, imm_b_sext, 0.U(WORD_LEN.W)),
+    (exeFcn === BR_BGE) -> Mux(op1Data >= op2Data, imm_b_sext, 0.U(WORD_LEN.W)),
+    (exeFcn === BR_BLTU) -> Mux(op1Data.asUInt() < op2Data.asUInt(), imm_b_sext, 0.U(WORD_LEN.W)),
+    (exeFcn === BR_BGEU) -> Mux(op1Data.asUInt() >= op2Data.asUInt(), imm_b_sext, 0.U(WORD_LEN.W)),
+    (exeFcn === ALU_JALR) -> ((op1Data + op2Data) & ~1.U(WORD_LEN.W)),
   ))
   io.dmem.addr := aluOut // LWやらSWやらするデータメモリのアドレス
     
@@ -107,8 +131,17 @@ class Core extends Module {
   // WBステージ
   /* ******************************** */
   regFile(rdAddr) := MuxCase(aluOut, Seq( // デフォはALUの結果をレジスタに入れる
-    (io.imem.inst === LW) -> io.dmem.data // LWしたALUのアドレスにあるメモリデータをレジスタに書き込み
+    (io.imem.inst === LW) -> io.dmem.data, // LWしたALUのアドレスにあるメモリデータをレジスタに書き込み
+    ((io.imem.inst === JAL) || (io.imem.inst === JALR)) -> pc, // ジャンプならrdにpc+4を入れる
   ))
+  // 分岐命令ならpcに書き込み
+  when((io.imem.inst === BEQ) || (io.imem.inst === BNE)|| (io.imem.inst === BLT) ||
+    (io.imem.inst === BGE) || (io.imem.inst === BLTU) || (io.imem.inst === BGEU)){
+    pc := pc + aluOut
+  }
+  when((io.imem.inst === JAL) || (io.imem.inst === JALR)){
+    pc := aluOut
+  }
   
   //**********************************
   // Debug
