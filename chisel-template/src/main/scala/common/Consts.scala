@@ -83,9 +83,28 @@ object Consts {
 
   val CSR_LEN = 3
   val CSR_X   = 0.U(CSR_LEN.W)
-  val CSR_W   = 1.U(CSR_LEN.W)
+  //val CSR_W   = 1.U(CSR_LEN.W)
   val CSR_S   = 2.U(CSR_LEN.W)
   val CSR_C   = 3.U(CSR_LEN.W)
   val CSR_E   = 4.U(CSR_LEN.W)
   val CSR_V   = 5.U(CSR_LEN.W)
+
+  // 自作フラグ．最終的な書き込み先を指定
+  // WBするデータをどこから読み込むか
+  val RP_LEN = 3
+  val RP_X = 0.U(RP_LEN.W)
+  val RS2_R = 1.U(RP_LEN.W)
+  val ALU_R = 2.U(RP_LEN.W)
+  val MEM_R = 3.U(RP_LEN.W)
+  val PC_R = 4.U(RP_LEN.W)
+  val CSR_R = 4.U(RP_LEN.W)
+  // どこにWBするか
+  val WP_LEN = 3
+  val WP_X = 0.U(WP_LEN.W)
+  val RD_W = 1.U(WP_LEN.W)
+  val MEM_W = 2.U(WP_LEN.W)
+  val PC_W = 3.U(WP_LEN.W)
+  val JMP_W = 4.U(WP_LEN.W)
+  val CSR_W = 5.U(WP_LEN.W)
+  val ECL_W =  6.U(WP_LEN.W)
 }

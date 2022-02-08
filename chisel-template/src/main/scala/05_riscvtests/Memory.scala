@@ -1,4 +1,4 @@
-package decode_more
+package riscvtests
 
 import chisel3._
 import chisel3.util._
@@ -28,7 +28,7 @@ class Memory extends Module {
         val dmem = new dMemory()
     })
     val mem = Mem(16384, UInt(8.W))
-    loadMemoryFromFile(mem, "src/hex/sw.hex")
+    loadMemoryFromFile(mem, "src/riscv/rv32ui-p-add.hex")
 
     // addrに対応するinstをメモリから読み取って書き込む
     io.imem.inst := Cat(
@@ -51,8 +51,8 @@ class Memory extends Module {
         mem(io.dmem.addr) := io.dmem.wData(7,0)
     }
 
-    printf(p"MEM iaddr : 0x${Hexadecimal(io.imem.addr)}\n")
-    printf(p"MEM inst : 0x${Hexadecimal(io.imem.inst)}\n")
-    printf(p"MEM daddr : 0x${Hexadecimal(io.dmem.addr)}\n")
-    printf(p"MEM data : 0x${Hexadecimal(io.dmem.data)}\n")
+    //printf(p"MEM iaddr : 0x${Hexadecimal(io.imem.addr)}\n")
+    //printf(p"MEM inst : 0x${Hexadecimal(io.imem.inst)}\n")
+    //printf(p"MEM daddr : 0x${Hexadecimal(io.dmem.addr)}\n")
+    //printf(p"MEM data : 0x${Hexadecimal(io.dmem.data)}\n")
 }
