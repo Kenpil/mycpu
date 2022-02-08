@@ -12,6 +12,8 @@ class Core extends Module {
     val exit = Output(Bool())
   })
   val regFile = Mem(32, UInt(WORD_LEN.W)) // レジスタ
+  val csrRegFile = Mem(4096, UInt(WORD_LEN.W)) // CSRレジスタ
+
 
   // IFステージ
   /* ******************************** */
@@ -33,8 +35,10 @@ class Core extends Module {
   val rs2Data = Mux(rs2Addr =/= 0.U(WORD_LEN.W), regFile(rs2Addr), 0.U(WORD_LEN.W))
   // I形式(LWとか)の即値を抜き出す
   val imm_i = io.imem.inst(31, 20)
+  val imm_z = io.imem.inst(19, 15)
   // 32bitのうちimm_iの先頭bitを20個拡張して，下12個はimm_i
   val imm_i_sext = Cat(Fill(20, imm_i(11)), imm_i)
+  val imm_z_uext = Cat(0.U(27.W), imm_z)
   // S形式(SWとか)の即値を抜き出す
   val imm_s = Cat(io.imem.inst(31, 25), io.imem.inst(11, 7))
   // 32bitのうちimm_sの先頭bitを20個拡張して，下12個はimm_i
@@ -45,52 +49,65 @@ class Core extends Module {
   // J形式
   val imm_j = Cat(io.imem.inst(31), io.imem.inst(19, 12), io.imem.inst(20), io.imem.inst(30, 21))
   val imm_j_sext = Cat(Fill(11, imm_j(19)), imm_j, 0.U(1.W))
+  // U形式
+  val imm_u = io.imem.inst(31, 12)
+  val imm_u_sext = imm_u << 12
 
   val cSignals = ListLookup(io.imem.inst,
     // デフォルト値はALU_X
-    List(ALU_X, 0.U(WORD_LEN.W), 0.U(WORD_LEN.W)),
+    List(ALU_X, 0.U(WORD_LEN.W), 0.U(WORD_LEN.W), RP_X, WP_X),
     Array(
       // io.imem.inst が各命令のBitPat(ADDとか)と一致したら
       // List(exeFcn, op1Data, op2Data) に各Listの中身を渡す
-      LW -> List(ALU_ADD, rs1Data, imm_i_sext),
-      SW -> List(ALU_ADD, rs1Data, imm_s_sext),
+      LW -> List(ALU_ADD, rs1Data, imm_i_sext, MEM_R, RD_W),
+      SW -> List(ALU_ADD, rs1Data, imm_s_sext, RS2_R, MEM_W),
       // 算術演算
-      ADD -> List(ALU_ADD, rs1Data, rs2Data),
-      ADDI -> List(ALU_ADD, rs1Data, imm_i_sext),
-      SUB -> List(ALU_SUB, rs1Data, rs2Data),
+      ADD -> List(ALU_ADD, rs1Data, rs2Data, ALU_R, RD_W),
+      ADDI -> List(ALU_ADD, rs1Data, imm_i_sext, ALU_R, RD_W),
+      SUB -> List(ALU_SUB, rs1Data, rs2Data, ALU_R, RD_W),
       // 論理演算
-      AND -> List(ALU_AND, rs1Data, rs2Data),
-      OR -> List(ALU_OR, rs1Data, rs2Data),
-      XOR -> List(ALU_XOR, rs1Data, rs2Data),
-      ANDI -> List(ALU_AND, rs1Data, imm_i_sext),
-      ORI -> List(ALU_OR, rs1Data, imm_i_sext),
-      XORI -> List(ALU_XOR, rs1Data, imm_i_sext),
+      AND -> List(ALU_AND, rs1Data, rs2Data, ALU_R, RD_W),
+      OR -> List(ALU_OR, rs1Data, rs2Data, ALU_R, RD_W),
+      XOR -> List(ALU_XOR, rs1Data, rs2Data, ALU_R, RD_W),
+      ANDI -> List(ALU_AND, rs1Data, imm_i_sext, ALU_R, RD_W),
+      ORI -> List(ALU_OR, rs1Data, imm_i_sext, ALU_R, RD_W),
+      XORI -> List(ALU_XOR, rs1Data, imm_i_sext, ALU_R, RD_W),
       // シフト演算
-      SLL -> List(ALU_SLL, rs1Data, rs2Data),
-      SRL -> List(ALU_SRL, rs1Data, rs2Data),
-      SRA -> List(ALU_SRA, rs1Data, rs2Data),
-      SLLI -> List(ALU_SLL, rs1Data, imm_i(4,0)),
-      SRLI -> List(ALU_SRL, rs1Data, imm_i(4,0)),
-      SRAI -> List(ALU_SRA, rs1Data, imm_i(4,0)),
+      SLL -> List(ALU_SLL, rs1Data, rs2Data, ALU_R, RD_W),
+      SRL -> List(ALU_SRL, rs1Data, rs2Data, ALU_R, RD_W),
+      SRA -> List(ALU_SRA, rs1Data, rs2Data, ALU_R, RD_W),
+      SLLI -> List(ALU_SLL, rs1Data, imm_i(4,0), ALU_R, RD_W),
+      SRLI -> List(ALU_SRL, rs1Data, imm_i(4,0), ALU_R, RD_W),
+      SRAI -> List(ALU_SRA, rs1Data, imm_i(4,0), ALU_R, RD_W),
       // 比較
-      SLT -> List(ALU_SLL, rs1Data, rs2Data),
-      SLTU -> List(ALU_SLTU, rs1Data, rs2Data),
-      SLTI -> List(ALU_SLT, rs1Data, imm_i_sext),
-      SLTIU -> List(ALU_SLTU, rs1Data, imm_i_sext),
+      SLT -> List(ALU_SLL, rs1Data, rs2Data, ALU_R, RD_W),
+      SLTU -> List(ALU_SLTU, rs1Data, rs2Data, ALU_R, RD_W),
+      SLTI -> List(ALU_SLT, rs1Data, imm_i_sext, ALU_R, RD_W),
+      SLTIU -> List(ALU_SLTU, rs1Data, imm_i_sext, ALU_R, RD_W),
       // 分岐
-      BEQ -> List(BR_BEQ, rs1Data, rs2Data),
-      BNE -> List(BR_BNE, rs1Data, rs2Data),
-      BLT -> List(BR_BLT, rs1Data, rs2Data),
-      BGE -> List(BR_BGE, rs1Data, rs2Data),
-      BLTU -> List(BR_BLTU, rs1Data, rs2Data),
-      BGEU -> List(BR_BGEU, rs1Data, rs2Data),
+      BEQ -> List(BR_BEQ, rs1Data, rs2Data, ALU_R, PC_W),
+      BNE -> List(BR_BNE, rs1Data, rs2Data, ALU_R, PC_W),
+      BLT -> List(BR_BLT, rs1Data, rs2Data, ALU_R, PC_W),
+      BGE -> List(BR_BGE, rs1Data, rs2Data, ALU_R, PC_W),
+      BLTU -> List(BR_BLTU, rs1Data, rs2Data, ALU_R, PC_W),
+      BGEU -> List(BR_BGEU, rs1Data, rs2Data, ALU_R, PC_W),
       // ジャンプ
-      JAL -> List(ALU_ADD, pc, imm_j_sext),
-      JALR -> List(ALU_JALR, rs1Data, imm_j_sext),
+      JAL -> List(ALU_ADD, pc, imm_j_sext, ALU_R, JMP_W),
+      JALR -> List(ALU_JALR, rs1Data, imm_j_sext, ALU_R, JMP_W),
+      // 即値ロード
+      LUI -> List(ALU_ADD, 0.U(WORD_LEN.W), imm_u_sext, ALU_R, RD_W),
+      AUIPC -> List(ALU_ADD, pc, imm_u_sext, ALU_R, RD_W),
+      // CSR命令
+      CSRRW -> List(ALU_ADD, rs1Data, 0.U(WORD_LEN.W), ALU_R, CSR_W),
+      CSRRWI -> List(ALU_ADD, imm_z_uext, 0.U(WORD_LEN.W), ALU_R, CSR_W),
+      CSRRS -> List(CSR_S, rs1Data, 0.U(WORD_LEN.W), ALU_R, CSR_W),
+      CSRRSI -> List(CSR_S, imm_z_uext, 0.U(WORD_LEN.W), ALU_R, CSR_W),
+      CSRRC -> List(CSR_C, rs1Data, 0.U(WORD_LEN.W), ALU_R, CSR_W),
+      CSRRCI -> List(CSR_C, imm_z_uext, 0.U(WORD_LEN.W), ALU_R, CSR_W),
     )
   )
   // cSignalsのListを左から順番に各要素に代入
-  val exeFcn::op1Data::op2Data::Nil = cSignals
+  val exeFcn::op1Data::op2Data::readP::wbP::Nil = cSignals
 
 
   // EXステージ
@@ -108,41 +125,54 @@ class Core extends Module {
     (exeFcn === ALU_SLT) -> (op1Data.asSInt() < op2Data.asSInt()),
     (exeFcn === ALU_SLTU) -> (op1Data.asUInt() < op2Data.asUInt()),
     // ifがtrueなら左に分岐，falseなら右に分岐
-    (exeFcn === BR_BEQ) -> Mux(op1Data === op2Data, imm_b_sext, 0.U(WORD_LEN.W)),
-    (exeFcn === BR_BNE) -> Mux(op1Data =/= op2Data, imm_b_sext, 0.U(WORD_LEN.W)),
-    (exeFcn === BR_BLT) -> Mux(op1Data < op2Data, imm_b_sext, 0.U(WORD_LEN.W)),
-    (exeFcn === BR_BGE) -> Mux(op1Data >= op2Data, imm_b_sext, 0.U(WORD_LEN.W)),
-    (exeFcn === BR_BLTU) -> Mux(op1Data.asUInt() < op2Data.asUInt(), imm_b_sext, 0.U(WORD_LEN.W)),
-    (exeFcn === BR_BGEU) -> Mux(op1Data.asUInt() >= op2Data.asUInt(), imm_b_sext, 0.U(WORD_LEN.W)),
+    (exeFcn === BR_BEQ) -> Mux(op1Data === op2Data, pc + imm_b_sext, pc),
+    (exeFcn === BR_BNE) -> Mux(op1Data =/= op2Data, pc + imm_b_sext, pc),
+    (exeFcn === BR_BLT) -> Mux(op1Data < op2Data, pc + imm_b_sext, pc),
+    (exeFcn === BR_BGE) -> Mux(op1Data >= op2Data, pc + imm_b_sext, pc),
+    (exeFcn === BR_BLTU) -> Mux(op1Data.asUInt() < op2Data.asUInt(), pc + imm_b_sext, pc),
+    (exeFcn === BR_BGEU) -> Mux(op1Data.asUInt() >= op2Data.asUInt(), pc + imm_b_sext, pc),
     (exeFcn === ALU_JALR) -> ((op1Data + op2Data) & ~1.U(WORD_LEN.W)),
+    // CSR
+    (exeFcn === CSR_S) -> (csrRegFile(imm_i) | op1Data),
+    (exeFcn === CSR_C) -> (csrRegFile(imm_i) & ~op1Data),
   ))
   io.dmem.addr := aluOut // LWやらSWやらするデータメモリのアドレス
+  // wbするデータを指定．デフォはALUの結果を書き込み
+  val wbData = MuxCase(aluOut, Seq(
+    (readP === RS2_R) -> rs2Data,
+    (readP === MEM_R) -> io.dmem.data,
+    (readP === PC_R) -> pc,
+  ))
+  io.dmem.wData := wbData
     
+
   // MAステージ
   /* ******************************** */
   // SW命令なら書き込み信号などを設定
   io.dmem.wEn := false.B
-  when(io.imem.inst === SW){
+  when(wbP === MEM_W){
     io.dmem.wEn := true.B // SWならメモリへの書き込みenableをtrue
   }
-  io.dmem.wData := rs2Data
+  // CSR系
+  when(wbP === CSR_W){
+    csrRegFile(imm_i) := wbData
+  }
 
 
   // WBステージ
   /* ******************************** */
-  regFile(rdAddr) := MuxCase(aluOut, Seq( // デフォはALUの結果をレジスタに入れる
-    (io.imem.inst === LW) -> io.dmem.data, // LWしたALUのアドレスにあるメモリデータをレジスタに書き込み
-    ((io.imem.inst === JAL) || (io.imem.inst === JALR)) -> pc, // ジャンプならrdにpc+4を入れる
-  ))
-  // 分岐命令ならpcに書き込み
-  when((io.imem.inst === BEQ) || (io.imem.inst === BNE)|| (io.imem.inst === BLT) ||
-    (io.imem.inst === BGE) || (io.imem.inst === BLTU) || (io.imem.inst === BGEU)){
-    pc := pc + aluOut
+  when(wbP === RD_W){
+    regFile(rdAddr) := wbData
   }
-  when((io.imem.inst === JAL) || (io.imem.inst === JALR)){
-    pc := aluOut
+  // 分岐命令系はpcに書き込み
+  when(wbP === PC_W){
+    pc := wbData
   }
-  
+  // ジャンプ命令は2箇所に書き込む必要有り
+  when(wbP === JMP_W){
+    regFile(rdAddr) := pc // rdには今のpc
+    pc := wbData // PCにはALUの結果
+  }
   //**********************************
   // Debug
   io.exit := (io.imem.inst === 0x00602823.U(WORD_LEN.W))
