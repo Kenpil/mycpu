@@ -1,4 +1,4 @@
-package riscvtests // 一括テスト用
+package {package} // 一括テスト用
 //package riscvtests
 
 import chisel3._
@@ -29,7 +29,7 @@ class Memory extends Module {
         val dmem = new dMemory()
     })
     val mem = Mem(16384, UInt(8.W))
-    loadMemoryFromFile(mem, "src/riscv/rv32mi-p-csr.hex") // 一括テスト用
+    loadMemoryFromFile(mem, "src/riscv/rv32{isa}-p-{inst}.hex") // 一括テスト用
     //loadMemoryFromFile(mem, "src/riscv/rv32ui-p-add.hex")
 
     // addrに対応するinstをメモリから読み取って書き込む

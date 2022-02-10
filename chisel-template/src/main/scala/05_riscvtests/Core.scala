@@ -92,7 +92,7 @@ class Core extends Module {
       SRLI -> List(ALU_SRL, rs1Data, imm_i(4,0), ALU_R, RD_W),
       SRAI -> List(ALU_SRA, rs1Data, imm_i(4,0), ALU_R, RD_W),
       // 比較
-      SLT -> List(ALU_SLL, rs1Data, rs2Data, ALU_R, RD_W),
+      SLT -> List(ALU_SLT, rs1Data, rs2Data, ALU_R, RD_W),
       SLTU -> List(ALU_SLTU, rs1Data, rs2Data, ALU_R, RD_W),
       SLTI -> List(ALU_SLT, rs1Data, imm_i_sext, ALU_R, RD_W),
       SLTIU -> List(ALU_SLTU, rs1Data, imm_i_sext, ALU_R, RD_W),
@@ -105,17 +105,17 @@ class Core extends Module {
       BGEU -> List(BR_BGEU, rs1Data, rs2Data, ALU_R, PC_W),
       // ジャンプ
       JAL -> List(ALU_ADD, pc, imm_j_sext, ALU_R, JMP_W),
-      JALR -> List(ALU_JALR, rs1Data, imm_j_sext, ALU_R, JMP_W),
+      JALR -> List(ALU_JALR, rs1Data, imm_i_sext, ALU_R, JMP_W),
       // 即値ロード
       LUI -> List(ALU_ADD, 0.U(WORD_LEN.W), imm_u_sext, ALU_R, RD_W),
       AUIPC -> List(ALU_ADD, pc, imm_u_sext, ALU_R, RD_W),
       // CSR命令
       CSRRW -> List(ALU_ADD, rs1Data, 0.U(WORD_LEN.W), ALU_R, CSR_W),
       CSRRWI -> List(ALU_ADD, imm_z_uext, 0.U(WORD_LEN.W), ALU_R, CSR_W),
-      CSRRS -> List(CSR_S, rs1Data, 0.U(WORD_LEN.W), ALU_R, CSR_W),
-      CSRRSI -> List(CSR_S, imm_z_uext, 0.U(WORD_LEN.W), ALU_R, CSR_W),
-      CSRRC -> List(CSR_C, rs1Data, 0.U(WORD_LEN.W), ALU_R, CSR_W),
-      CSRRCI -> List(CSR_C, imm_z_uext, 0.U(WORD_LEN.W), ALU_R, CSR_W),
+      CSRRS -> List(CSR_RS, rs1Data, 0.U(WORD_LEN.W), ALU_R, CSR_W),
+      CSRRSI -> List(CSR_RS, imm_z_uext, 0.U(WORD_LEN.W), ALU_R, CSR_W),
+      CSRRC -> List(CSR_RC, rs1Data, 0.U(WORD_LEN.W), ALU_R, CSR_W),
+      CSRRCI -> List(CSR_RC, imm_z_uext, 0.U(WORD_LEN.W), ALU_R, CSR_W),
       // ECALL
       ECALL -> List(ECL_W, 0.U(WORD_LEN.W), 0.U(WORD_LEN.W), RP_X, ECL_W),
     )
@@ -147,8 +147,8 @@ class Core extends Module {
     (exeFcn === BR_BGEU) -> Mux(op1Data.asUInt() >= op2Data.asUInt(), pc + imm_b_sext, pcPlus4),
     (exeFcn === ALU_JALR) -> ((op1Data + op2Data) & ~1.U(WORD_LEN.W)),
     // CSR
-    (exeFcn === CSR_S) -> (csrRegFile(imm_i) | op1Data),
-    (exeFcn === CSR_C) -> (csrRegFile(imm_i) & ~op1Data),
+    (exeFcn === CSR_RS) -> (csrRegFile(imm_i) + op1Data),
+    (exeFcn === CSR_RC) -> (csrRegFile(imm_i) & (~op1Data)),
   ))
   io.dmem.addr := aluOut // LWやらSWやらするデータメモリのアドレス
   // wbするデータを指定．デフォはALUの結果を書き込み
@@ -170,7 +170,17 @@ class Core extends Module {
   // CSR系
   val csrOrg = csrRegFile(imm_i)
   when(wbP === CSR_W){
+    //printf(p"csrOrg : 0x${Hexadecimal(csrOrg)}\n")
+    when(exeFcn === CSR_RS){
+      printf(p"RCS_RS! aluOut: ${aluOut}, csrRegFile(imm_i): ${Hexadecimal(csrRegFile(imm_i))}, op1Data: ${Hexadecimal(op1Data)}\n")
+      printf(p"CSR_RS! regFile(rdAddr): ${regFile(rdAddr)}\n")
+    }
+    printf(p"imm_i : 0x${Hexadecimal(imm_i)}\n")
+    printf(p"imm_z_uext : ${imm_z_uext}\n")
+    printf(p"wbData : ${wbData}\n")
     csrRegFile(imm_i) := wbData
+    printf(p"csr[0x340] : ${Hexadecimal(csrRegFile(0x340))}\n")
+    //printf(p"csrNew : 0x${Hexadecimal(csrRegFile(imm_i))}\n")
   }
   // ECALL
   when(wbP === ECL_W){
@@ -189,7 +199,9 @@ class Core extends Module {
     printf("ECL_W!\n")
   }
   regFile(rdAddr) := MuxCase(wbData, Seq(
-    (wbP === JMP_W) -> pc, // ジャンプ命令はrdには今のpcを書き込む
+    (wbP === MEM_W) -> regFile(rdAddr), // メモリ書きだけならなにもせん 
+    (wbP === PC_W) -> regFile(rdAddr), // 分岐系はなにもせん
+    (wbP === JMP_W) -> pcPlus4, // ジャンプ命令はrdには今のpcを書き込む
     (wbP === CSR_W) -> csrOrg, // CSRはrdに元のCSR値を書き込む
   ))
   pc := MuxCase(pcPlus4, Seq(
@@ -203,7 +215,7 @@ class Core extends Module {
   // Debug
   //io.exit := (io.imem.inst === 0x00602823.U(WORD_LEN.W))
   io.exit := (pc === 0x44.U(WORD_LEN.W))
-  when(cnt > 400.U){
+  when(cnt > 10.U){
     //io.exit := true.B // SWならメモリへの書き込みenableをtrue
   printf("---------\n")
   printf(p"pc : 0x${Hexadecimal(pc)}\n")
@@ -221,6 +233,7 @@ class Core extends Module {
   //printf(p"io.dmem.wEn : ${io.dmem.wEn}\n")
   //printf(p"io.dmem.wData : 0x${Hexadecimal(io.dmem.wData)}\n")
   printf(p"io.gp : ${regFile(3)}\n")
+  printf(p"csr[0x340] : ${Hexadecimal(csrRegFile(0x340))}\n")
   printf("---------\n")
   }
 
