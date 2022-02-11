@@ -19,8 +19,8 @@ class dMemory extends Bundle{
     val addr = Input(UInt(WORD_LEN.W))
     val data = Output(UInt(WORD_LEN.W))
     // write用: addrとdataもらって書き込むときのenable制御
-    val wEn = Input(Bool())
-    val wData = Input(UInt(WORD_LEN.W))
+    val wEn = Input(Bool()) // trueなら書き込みする
+    val wData = Input(UInt(WORD_LEN.W)) // 書き込みするデータ
 }
 
 class Memory extends Module {

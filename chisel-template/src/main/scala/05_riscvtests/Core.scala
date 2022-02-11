@@ -12,7 +12,7 @@ class Core extends Module {
     val exit = Output(Bool())
     val gp = Output(UInt(WORD_LEN.W))
   })
-  val regFile = Mem(32, UInt(WORD_LEN.W)) // レジスタ
+  val regFile = Mem(32, UInt(WORD_LEN.W)) // 32本のフツーのレジスタ
   val csrRegFile = Mem(4096, UInt(WORD_LEN.W)) // CSRレジスタ
   io.gp := regFile(3)
 
@@ -20,18 +20,12 @@ class Core extends Module {
   // IFステージ
   /* ******************************** */
   val pc = RegInit(0.U(WORD_LEN.W))
-  //val pcPlus4 = RegInit(0.U(WORD_LEN.W))
   // pcを4ずつカウントアップ
-  //pcPlus4 := pc + 4.U(WORD_LEN.W)
   val pcPlus4 = pc + 4.U(WORD_LEN.W)
-  //pc := pc + 4.U(WORD_LEN.W)
   // pcの値のアドレスにある命令をフェッチしてくる
   io.imem.addr := pc
-  printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
-  printf(p"pc : 0x${Hexadecimal(pc)}\n")
-  printf(p"pcPlus4 : 0x${Hexadecimal(pcPlus4)}\n")
-  printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
+  // デバッグ用のサイクルカウント
   val cnt = RegInit(0.U(WORD_LEN.W))
   cnt := cnt + 1.U(WORD_LEN.W)
 
@@ -67,10 +61,15 @@ class Core extends Module {
 
   val cSignals = ListLookup(io.imem.inst,
     // デフォルト値はALU_X
+    // io.imem.inst が各命令のBitPat(ADDとか)と一致したら
+    // List(exeFcn, op1Data, op2Data, readP, wbP) に各Listの中身を渡す
+    // exeFcn: ALUでの実行内容
+    // op1Data: オペランド1
+    // op2Data: オペランド2
+    // readP: write back データの読み込み元
+    // wbP: wbの書き込み先 
     List(ALU_X, 0.U(WORD_LEN.W), 0.U(WORD_LEN.W), RP_X, WP_X),
     Array(
-      // io.imem.inst が各命令のBitPat(ADDとか)と一致したら
-      // List(exeFcn, op1Data, op2Data) に各Listの中身を渡す
       LW -> List(ALU_ADD, rs1Data, imm_i_sext, MEM_R, RD_W),
       SW -> List(ALU_ADD, rs1Data, imm_s_sext, RS2_R, MEM_W),
       // 算術演算
@@ -105,7 +104,7 @@ class Core extends Module {
       BGEU -> List(BR_BGEU, rs1Data, rs2Data, ALU_R, PC_W),
       // ジャンプ
       JAL -> List(ALU_ADD, pc, imm_j_sext, ALU_R, JMP_W),
-      JALR -> List(ALU_JALR, rs1Data, imm_i_sext, ALU_R, JMP_W),
+      JALR -> List(ALU_JALR, rs1Data, imm_i_sext, ALU_R, JMP_W), // imm_"i" に注意
       // 即値ロード
       LUI -> List(ALU_ADD, 0.U(WORD_LEN.W), imm_u_sext, ALU_R, RD_W),
       AUIPC -> List(ALU_ADD, pc, imm_u_sext, ALU_R, RD_W),
@@ -126,6 +125,7 @@ class Core extends Module {
 
   // EXステージ
   /* ******************************** */
+  // デフォルトはrdの元のレジスタ値
   val aluOut = MuxCase(regFile(rdAddr), Seq(
     (exeFcn === ALU_ADD) -> (op1Data + op2Data),
     (exeFcn === ALU_SUB) -> (op1Data - op2Data),
@@ -170,17 +170,7 @@ class Core extends Module {
   // CSR系
   val csrOrg = csrRegFile(imm_i)
   when(wbP === CSR_W){
-    //printf(p"csrOrg : 0x${Hexadecimal(csrOrg)}\n")
-    when(exeFcn === CSR_RS){
-      printf(p"RCS_RS! aluOut: ${aluOut}, csrRegFile(imm_i): ${Hexadecimal(csrRegFile(imm_i))}, op1Data: ${Hexadecimal(op1Data)}\n")
-      printf(p"CSR_RS! regFile(rdAddr): ${regFile(rdAddr)}\n")
-    }
-    printf(p"imm_i : 0x${Hexadecimal(imm_i)}\n")
-    printf(p"imm_z_uext : ${imm_z_uext}\n")
-    printf(p"wbData : ${wbData}\n")
     csrRegFile(imm_i) := wbData
-    printf(p"csr[0x340] : ${Hexadecimal(csrRegFile(0x340))}\n")
-    //printf(p"csrNew : 0x${Hexadecimal(csrRegFile(imm_i))}\n")
   }
   // ECALL
   when(wbP === ECL_W){
@@ -192,12 +182,6 @@ class Core extends Module {
   // WBステージ
   /* ******************************** */
   // 分岐命令系はpcに書き込み
-  when(wbP === PC_W){
-    printf("PC_W!\n")
-  }
-  when(wbP === ECL_W){
-    printf("ECL_W!\n")
-  }
   regFile(rdAddr) := MuxCase(wbData, Seq(
     (wbP === MEM_W) -> regFile(rdAddr), // メモリ書きだけならなにもせん 
     (wbP === PC_W) -> regFile(rdAddr), // 分岐系はなにもせん
@@ -215,26 +199,18 @@ class Core extends Module {
   // Debug
   //io.exit := (io.imem.inst === 0x00602823.U(WORD_LEN.W))
   io.exit := (pc === 0x44.U(WORD_LEN.W))
-  when(cnt > 10.U){
-    //io.exit := true.B // SWならメモリへの書き込みenableをtrue
+  //when(cnt > 10.U){
   printf("---------\n")
   printf(p"pc : 0x${Hexadecimal(pc)}\n")
-  //printf(p"pcPlus4 : 0x${Hexadecimal(pcPlus4)}\n")
-  //printf(p"pcNext : 0x${Hexadecimal(pcNext)}\n")
   printf(p"inst : 0x${Hexadecimal(io.imem.inst)}\n")
   printf(p"rs1_addr : $rs1Addr\n")
   printf(p"rs2_addr : $rs2Addr\n")
   printf(p"rd_addr : $rdAddr\n")
   printf(p"rs1Data : 0x${Hexadecimal(rs1Data)}\n")
   printf(p"rs2Data : 0x${Hexadecimal(rs2Data)}\n")
-  //printf(p"imm_i_sext : 0x${Hexadecimal(imm_i_sext)}\n")
-  //printf(p"imm_s_sext : 0x${Hexadecimal(imm_i_sext)}\n")
   printf(p"aluOut : 0x${Hexadecimal(aluOut)}\n")
-  //printf(p"io.dmem.wEn : ${io.dmem.wEn}\n")
-  //printf(p"io.dmem.wData : 0x${Hexadecimal(io.dmem.wData)}\n")
   printf(p"io.gp : ${regFile(3)}\n")
-  printf(p"csr[0x340] : ${Hexadecimal(csrRegFile(0x340))}\n")
   printf("---------\n")
-  }
+  //}
 
 }
