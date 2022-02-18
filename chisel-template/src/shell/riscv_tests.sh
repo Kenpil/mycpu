@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#UI_INSTS=(sw lw add addi sub and andi or ori xor xori sll srl sra slli srli srai slt sltu slti sltiu beq bne blt bge bltu bgeu jal jalr lui auipc)
-#MI_INSTS=(csr scall)
-MI_INSTS=(csr)
+UI_INSTS=(sw lw add addi sub and andi or ori xor xori sll srl sra slli srli srai slt sltu slti sltiu beq bne blt bge bltu bgeu jal jalr lui auipc)
+MI_INSTS=(csr scall)
+#MI_INSTS=(csr)
 
 WORK_DIR=/src/chisel-template
 RESULT_DIR=$WORK_DIR/results
@@ -26,5 +26,5 @@ function loop_test(){
 
 PACKAGE_NAME=$1
 DIRECTORY_NAME=$2
-#loop_test UI_INSTS[@] $PACKAGE_NAME "ui" $DIRECTORY_NAME
+loop_test UI_INSTS[@] $PACKAGE_NAME "ui" $DIRECTORY_NAME
 loop_test MI_INSTS[@] $PACKAGE_NAME "mi" $DIRECTORY_NAME

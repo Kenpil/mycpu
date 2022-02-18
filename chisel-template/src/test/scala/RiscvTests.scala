@@ -1,4 +1,4 @@
-package riscvtests // 一括テスト用
+package pipeline_hazard // 一括テスト用
 //package riscvtests
 
 import org.scalatest._

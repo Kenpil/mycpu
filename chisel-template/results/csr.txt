@@ -3,2660 +3,3653 @@
 [info] loading project definition from /src/chisel-template/project
 [info] loading settings for project root from build.sbt ...
 [info] set current project to %NAME% (in build file:/src/chisel-template/)
-[info] compiling 2 Scala sources to /src/chisel-template/target/scala-2.12/classes ...
+[info] compiling 1 Scala source to /src/chisel-template/target/scala-2.12/classes ...
 [info] done compiling
 Elaborating design...
 Done elaborating.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------
 pc : 0x00000000
-pcPlus4 : 0x00000004
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x04c0006f
+idPcReg: 0x00000000
+  idInstReg : 0x00000000
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000000
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x0
+maPcReg: 0x00000000
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000000
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+---------
+pc : 0x00000004
+  inst : 0x34202f73
+idPcReg: 0x00000000
+  idInstReg : 0x04c0006f
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000000
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x0c
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x0
+maPcReg: 0x00000000
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000000
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+<<<<<<<< PC change!: 0x000000000000004c >>>>>>>>
+---------
+pc : 0x00000008
+  inst : 0x00800f93
+idPcReg: 0x00000004
+  idInstReg : 0x34202f73
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000000
+  exOp1Data : 0x00000000
+  exOp2Data : 0x0000004c
+  aluOut : 0x000000000000004c
+ -rs1Addr : 0x00
+  rs2Addr : 0x02
+  rdAddr : 0x1e
+  exRdAddr : 0x00000000
+  exWbP : 0x4
+maPcReg: 0x00000000
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000000
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+---------
 pc : 0x0000004c
-pcPlus4 : 0x00000050
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x00000093
+idPcReg: 0x00000008
+  idInstReg : 0x00000013
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000004
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000000
+  io.dmem.wData: 0x0000004c
+wbPcReg: 0x00000000
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+---------
 pc : 0x00000050
-pcPlus4 : 0x00000054
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x00000113
+idPcReg: 0x0000004c
+  idInstReg : 0x00000093
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000008
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x01
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000004
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000000
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x0000004c
+idExStallFlg :  0
+io.gp :           0
+---------
+
+---------
 pc : 0x00000054
-pcPlus4 : 0x00000058
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x00000193
+idPcReg: 0x00000050
+  idInstReg : 0x00000113
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000004c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x02
+  exRdAddr : 0x00000001
+  exWbP : 0x1
+maPcReg: 0x00000008
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000004
+  regFile(0x00000000): 0x00000004
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+---------
 pc : 0x00000058
-pcPlus4 : 0x0000005c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x00000213
+idPcReg: 0x00000054
+  idInstReg : 0x00000193
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000050
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x03
+  exRdAddr : 0x00000002
+  exWbP : 0x1
+maPcReg: 0x0000004c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000008
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+---------
 pc : 0x0000005c
-pcPlus4 : 0x00000060
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x00000293
+idPcReg: 0x00000058
+  idInstReg : 0x00000213
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000054
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x04
+  exRdAddr : 0x00000003
+  exWbP : 0x1
+maPcReg: 0x00000050
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x0000004c
+  regFile(0x00000001): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+---------
 pc : 0x00000060
-pcPlus4 : 0x00000064
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x00000313
+idPcReg: 0x0000005c
+  idInstReg : 0x00000293
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000058
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x05
+  exRdAddr : 0x00000004
+  exWbP : 0x1
+maPcReg: 0x00000054
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000050
+  regFile(0x00000002): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+---------
 pc : 0x00000064
-pcPlus4 : 0x00000068
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x00000393
+idPcReg: 0x00000060
+  idInstReg : 0x00000313
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000005c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x06
+  exRdAddr : 0x00000005
+  exWbP : 0x1
+maPcReg: 0x00000058
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000054
+  regFile(0x00000003): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+---------
 pc : 0x00000068
-pcPlus4 : 0x0000006c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x00000413
+idPcReg: 0x00000064
+  idInstReg : 0x00000393
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000060
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x07
+  exRdAddr : 0x00000006
+  exWbP : 0x1
+maPcReg: 0x0000005c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000058
+  regFile(0x00000004): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+---------
 pc : 0x0000006c
-pcPlus4 : 0x00000070
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x00000493
+idPcReg: 0x00000068
+  idInstReg : 0x00000413
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000064
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x08
+  exRdAddr : 0x00000007
+  exWbP : 0x1
+maPcReg: 0x00000060
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x0000005c
+  regFile(0x00000005): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+---------
 pc : 0x00000070
-pcPlus4 : 0x00000074
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x00000513
+idPcReg: 0x0000006c
+  idInstReg : 0x00000493
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000068
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x09
+  exRdAddr : 0x00000008
+  exWbP : 0x1
+maPcReg: 0x00000064
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000060
+  regFile(0x00000006): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+---------
 pc : 0x00000074
-pcPlus4 : 0x00000078
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000074
-inst : 0x00000593
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  11
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000593
+idPcReg: 0x00000070
+  idInstReg : 0x00000513
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000006c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x0a
+  exRdAddr : 0x00000009
+  exWbP : 0x1
+maPcReg: 0x00000068
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000064
+  regFile(0x00000007): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000078
-pcPlus4 : 0x0000007c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000078
-inst : 0x00000613
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  12
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000613
+idPcReg: 0x00000074
+  idInstReg : 0x00000593
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000070
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x0b
+  exRdAddr : 0x0000000a
+  exWbP : 0x1
+maPcReg: 0x0000006c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000068
+  regFile(0x00000008): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x0000007c
-pcPlus4 : 0x00000080
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x0000007c
-inst : 0x00000693
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  13
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000693
+idPcReg: 0x00000078
+  idInstReg : 0x00000613
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000074
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x0c
+  exRdAddr : 0x0000000b
+  exWbP : 0x1
+maPcReg: 0x00000070
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x0000006c
+  regFile(0x00000009): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000080
-pcPlus4 : 0x00000084
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000080
-inst : 0x00000713
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  14
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000713
+idPcReg: 0x0000007c
+  idInstReg : 0x00000693
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000078
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x0d
+  exRdAddr : 0x0000000c
+  exWbP : 0x1
+maPcReg: 0x00000074
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000070
+  regFile(0x0000000a): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000084
-pcPlus4 : 0x00000088
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000084
-inst : 0x00000793
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  15
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000793
+idPcReg: 0x00000080
+  idInstReg : 0x00000713
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000007c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x0e
+  exRdAddr : 0x0000000d
+  exWbP : 0x1
+maPcReg: 0x00000078
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000074
+  regFile(0x0000000b): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000088
-pcPlus4 : 0x0000008c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000088
-inst : 0x00000813
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  16
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000813
+idPcReg: 0x00000084
+  idInstReg : 0x00000793
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000080
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x0f
+  exRdAddr : 0x0000000e
+  exWbP : 0x1
+maPcReg: 0x0000007c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000078
+  regFile(0x0000000c): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x0000008c
-pcPlus4 : 0x00000090
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x0000008c
-inst : 0x00000893
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  17
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000893
+idPcReg: 0x00000088
+  idInstReg : 0x00000813
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000084
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x10
+  exRdAddr : 0x0000000f
+  exWbP : 0x1
+maPcReg: 0x00000080
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x0000007c
+  regFile(0x0000000d): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000090
-pcPlus4 : 0x00000094
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000090
-inst : 0x00000913
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  18
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000913
+idPcReg: 0x0000008c
+  idInstReg : 0x00000893
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000088
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x11
+  exRdAddr : 0x00000010
+  exWbP : 0x1
+maPcReg: 0x00000084
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000080
+  regFile(0x0000000e): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000094
-pcPlus4 : 0x00000098
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000094
-inst : 0x00000993
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  19
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000993
+idPcReg: 0x00000090
+  idInstReg : 0x00000913
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000008c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x12
+  exRdAddr : 0x00000011
+  exWbP : 0x1
+maPcReg: 0x00000088
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000084
+  regFile(0x0000000f): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000098
-pcPlus4 : 0x0000009c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000098
-inst : 0x00000a13
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  20
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000a13
+idPcReg: 0x00000094
+  idInstReg : 0x00000993
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000090
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x13
+  exRdAddr : 0x00000012
+  exWbP : 0x1
+maPcReg: 0x0000008c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000088
+  regFile(0x00000010): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x0000009c
-pcPlus4 : 0x000000a0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x0000009c
-inst : 0x00000a93
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  21
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000a93
+idPcReg: 0x00000098
+  idInstReg : 0x00000a13
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000094
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x14
+  exRdAddr : 0x00000013
+  exWbP : 0x1
+maPcReg: 0x00000090
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x0000008c
+  regFile(0x00000011): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x000000a0
-pcPlus4 : 0x000000a4
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000000a0
-inst : 0x00000b13
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  22
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000b13
+idPcReg: 0x0000009c
+  idInstReg : 0x00000a93
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000098
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x15
+  exRdAddr : 0x00000014
+  exWbP : 0x1
+maPcReg: 0x00000094
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000090
+  regFile(0x00000012): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x000000a4
-pcPlus4 : 0x000000a8
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000000a4
-inst : 0x00000b93
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  23
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000b93
+idPcReg: 0x000000a0
+  idInstReg : 0x00000b13
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000009c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x16
+  exRdAddr : 0x00000015
+  exWbP : 0x1
+maPcReg: 0x00000098
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000094
+  regFile(0x00000013): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x000000a8
-pcPlus4 : 0x000000ac
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000000a8
-inst : 0x00000c13
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  24
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000c13
+idPcReg: 0x000000a4
+  idInstReg : 0x00000b93
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000a0
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x17
+  exRdAddr : 0x00000016
+  exWbP : 0x1
+maPcReg: 0x0000009c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000098
+  regFile(0x00000014): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x000000ac
-pcPlus4 : 0x000000b0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000000ac
-inst : 0x00000c93
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  25
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000c93
+idPcReg: 0x000000a8
+  idInstReg : 0x00000c13
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000a4
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x18
+  exRdAddr : 0x00000017
+  exWbP : 0x1
+maPcReg: 0x000000a0
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x0000009c
+  regFile(0x00000015): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x000000b0
-pcPlus4 : 0x000000b4
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000000b0
-inst : 0x00000d13
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  26
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000d13
+idPcReg: 0x000000ac
+  idInstReg : 0x00000c93
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000a8
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x19
+  exRdAddr : 0x00000018
+  exWbP : 0x1
+maPcReg: 0x000000a4
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000a0
+  regFile(0x00000016): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x000000b4
-pcPlus4 : 0x000000b8
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000000b4
-inst : 0x00000d93
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  27
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000d93
+idPcReg: 0x000000b0
+  idInstReg : 0x00000d13
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000ac
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x1a
+  exRdAddr : 0x00000019
+  exWbP : 0x1
+maPcReg: 0x000000a8
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000a4
+  regFile(0x00000017): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x000000b8
-pcPlus4 : 0x000000bc
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000000b8
-inst : 0x00000e13
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  28
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000e13
+idPcReg: 0x000000b4
+  idInstReg : 0x00000d93
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000b0
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x1b
+  exRdAddr : 0x0000001a
+  exWbP : 0x1
+maPcReg: 0x000000ac
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000a8
+  regFile(0x00000018): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x000000bc
-pcPlus4 : 0x000000c0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000000bc
-inst : 0x00000e93
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  29
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000e93
+idPcReg: 0x000000b8
+  idInstReg : 0x00000e13
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000b4
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x1c
+  exRdAddr : 0x0000001b
+  exWbP : 0x1
+maPcReg: 0x000000b0
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000ac
+  regFile(0x00000019): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x000000c0
-pcPlus4 : 0x000000c4
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000000c0
-inst : 0x00000f13
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  30
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000f13
+idPcReg: 0x000000bc
+  idInstReg : 0x00000e93
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000b8
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x1d
+  exRdAddr : 0x0000001c
+  exWbP : 0x1
+maPcReg: 0x000000b4
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000b0
+  regFile(0x0000001a): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x000000c4
-pcPlus4 : 0x000000c8
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000000c4
-inst : 0x00000f93
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  31
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000f93
+idPcReg: 0x000000c0
+  idInstReg : 0x00000f13
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000bc
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x1e
+  exRdAddr : 0x0000001d
+  exWbP : 0x1
+maPcReg: 0x000000b8
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000b4
+  regFile(0x0000001b): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x000000c8
-pcPlus4 : 0x000000cc
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-RCS_RS! aluOut:                    0, csrRegFile(imm_i): 00000000, op1Data: 00000000
-CSR_RS! regFile(rdAddr):           0
-imm_i : 0xf14
-imm_z_uext :           0
-wbData :                    0
-csr[0x340] : 00000000
----------
-pc : 0x000000c8
-inst : 0xf1402573
-rs1_addr :   0
-rs2_addr :  20
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0xf1402573
+idPcReg: 0x000000c4
+  idInstReg : 0x00000f93
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000c0
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x1f
+  exRdAddr : 0x0000001e
+  exWbP : 0x1
+maPcReg: 0x000000bc
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000b8
+  regFile(0x0000001c): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000000cc
-pcPlus4 : 0x000000d0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
+
 ---------
 pc : 0x000000cc
-inst : 0x00051063
-rs1_addr :  10
-rs2_addr :   0
-rd_addr :   0
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x00000000000000d0
+  inst : 0x00051063
+idPcReg: 0x000000c8
+  idInstReg : 0xf1402573
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000c4
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x14
+  rdAddr : 0x0a
+  exRdAddr : 0x0000001f
+  exWbP : 0x1
+maPcReg: 0x000000c0
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000bc
+  regFile(0x0000001d): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
 pc : 0x000000d0
-pcPlus4 : 0x000000d4
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x00000297
+idPcReg: 0x000000cc
+  idInstReg : 0x00051063
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000c8
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x0a
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x0000000a
+  exWbP : 0x5
+maPcReg: 0x000000c4
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000c0
+  regFile(0x0000001e): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  1
+io.gp :           0
+---------
+
 ---------
 pc : 0x000000d0
-inst : 0x00000297
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :   5
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x00000000000000d0
+  inst : 0x00000297
+idPcReg: 0x000000cc
+  idInstReg : 0x00051063
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000cc
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x0a
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x000000c8
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000c4
+  regFile(0x0000001f): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+<<<<<<<< PC change!: 0x00000000000000d0 >>>>>>>>
+---------
 pc : 0x000000d4
-pcPlus4 : 0x000000d8
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x01028293
+idPcReg: 0x000000d0
+  idInstReg : 0x00000297
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000cc
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x00000000000000d0
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x05
+  exRdAddr : 0x00000000
+  exWbP : 0x3
+maPcReg: 0x000000cc
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000c8
+  regFile(0x0000000a): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+---------
+pc : 0x000000d0
+  inst : 0x00000297
+idPcReg: 0x000000d4
+  idInstReg : 0x00000013
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000d0
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x000000cc
+  io.dmem.wData: 0x000000d0
+wbPcReg: 0x000000cc
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
 ---------
 pc : 0x000000d4
-inst : 0x01028293
-rs1_addr :   5
-rs2_addr :  16
-rd_addr :   5
-rs1Data : 0x000000d0
-rs2Data : 0x00000000
-aluOut : 0x00000000000000e0
+  inst : 0x01028293
+idPcReg: 0x000000d0
+  idInstReg : 0x00000297
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000d4
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x05
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x000000d0
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000cc
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x000000d0
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
 pc : 0x000000d8
-pcPlus4 : 0x000000dc
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x305
-imm_z_uext :           5
-wbData :                  224
-csr[0x340] : 00000000
+  inst : 0x30529073
+idPcReg: 0x000000d4
+  idInstReg : 0x01028293
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000d0
+  exOp1Data : 0x000000d0
+  exOp2Data : 0x00000000
+  aluOut : 0x00000000000000d0
+ -rs1Addr : 0x05
+  rs2Addr : 0x10
+  rdAddr : 0x05
+  exRdAddr : 0x00000005
+  exWbP : 0x1
+maPcReg: 0x000000d4
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000d0
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  1
+io.gp :           0
+---------
+
 ---------
 pc : 0x000000d8
-inst : 0x30529073
-rs1_addr :   5
-rs2_addr :   5
-rd_addr :   0
-rs1Data : 0x000000e0
-rs2Data : 0x000000e0
-aluOut : 0x00000000000000e0
+  inst : 0x30529073
+idPcReg: 0x000000d4
+  idInstReg : 0x01028293
+  rs1Data : 0x000000d0
+  rs2Data : 0x00000000
+exPcReg: 0x000000d4
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x05
+  rs2Addr : 0x10
+  rdAddr : 0x05
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x000000d0
+  io.dmem.wData: 0x000000d0
+wbPcReg: 0x000000d4
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
 pc : 0x000000dc
-pcPlus4 : 0x000000e0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x180
-imm_z_uext :           0
-wbData :                    0
-csr[0x340] : 00000000
+  inst : 0x18005073
+idPcReg: 0x000000d8
+  idInstReg : 0x30529073
+  rs1Data : 0x000000d0
+  rs2Data : 0x000000d0
+exPcReg: 0x000000d4
+  exOp1Data : 0x000000d0
+  exOp2Data : 0x00000010
+  aluOut : 0x00000000000000e0
+ -rs1Addr : 0x05
+  rs2Addr : 0x05
+  rdAddr : 0x00
+  exRdAddr : 0x00000005
+  exWbP : 0x1
+maPcReg: 0x000000d4
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000d0
+  regFile(0x00000005): 0x00000000
+  wbWbData : 0x000000d0
+idExStallFlg :  1
+io.gp :           0
+---------
+
 ---------
 pc : 0x000000dc
-inst : 0x18005073
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :   0
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x18005073
+idPcReg: 0x000000d8
+  idInstReg : 0x30529073
+  rs1Data : 0x000000e0
+  rs2Data : 0x000000e0
+exPcReg: 0x000000d8
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x05
+  rs2Addr : 0x05
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x000000d4
+  io.dmem.wData: 0x000000e0
+wbPcReg: 0x000000d4
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x000000e0
-pcPlus4 : 0x000000e4
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000000e0
-inst : 0x00000297
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :   5
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x00000000000000e0
+  inst : 0x00000297
+idPcReg: 0x000000dc
+  idInstReg : 0x18005073
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000d8
+  exOp1Data : 0x000000e0
+  exOp2Data : 0x00000000
+  aluOut : 0x00000000000000e0
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x5
+maPcReg: 0x000000d8
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000d4
+  regFile(0x00000005): 0x000000d0
+  wbWbData : 0x000000e0
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x000000e4
-pcPlus4 : 0x000000e8
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000000e4
-inst : 0x02028293
-rs1_addr :   5
-rs2_addr :   0
-rd_addr :   5
-rs1Data : 0x000000e0
-rs2Data : 0x00000000
-aluOut : 0x0000000000000100
+  inst : 0x02028293
+idPcReg: 0x000000e0
+  idInstReg : 0x00000297
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000dc
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x05
+  exRdAddr : 0x00000000
+  exWbP : 0x5
+maPcReg: 0x000000d8
+  io.dmem.wData: 0x000000e0
+wbPcReg: 0x000000d8
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
 pc : 0x000000e8
-pcPlus4 : 0x000000ec
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x305
-imm_z_uext :           5
-wbData :                  256
-csr[0x340] : 00000000
+  inst : 0x30529073
+idPcReg: 0x000000e4
+  idInstReg : 0x02028293
+  rs1Data : 0x000000e0
+  rs2Data : 0x00000000
+exPcReg: 0x000000e0
+  exOp1Data : 0x000000e0
+  exOp2Data : 0x00000000
+  aluOut : 0x00000000000000e0
+ -rs1Addr : 0x05
+  rs2Addr : 0x00
+  rdAddr : 0x05
+  exRdAddr : 0x00000005
+  exWbP : 0x1
+maPcReg: 0x000000dc
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000d8
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x000000e0
+idExStallFlg :  1
+io.gp :           0
+---------
+
 ---------
 pc : 0x000000e8
-inst : 0x30529073
-rs1_addr :   5
-rs2_addr :   5
-rd_addr :   0
-rs1Data : 0x00000100
-rs2Data : 0x00000100
-aluOut : 0x0000000000000100
+  inst : 0x30529073
+idPcReg: 0x000000e4
+  idInstReg : 0x02028293
+  rs1Data : 0x000000e0
+  rs2Data : 0x00000000
+exPcReg: 0x000000e4
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x05
+  rs2Addr : 0x00
+  rdAddr : 0x05
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x000000e0
+  io.dmem.wData: 0x000000e0
+wbPcReg: 0x000000dc
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
 pc : 0x000000ec
-pcPlus4 : 0x000000f0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x800002b7
+idPcReg: 0x000000e8
+  idInstReg : 0x30529073
+  rs1Data : 0x000000e0
+  rs2Data : 0x000000e0
+exPcReg: 0x000000e4
+  exOp1Data : 0x000000e0
+  exOp2Data : 0x00000020
+  aluOut : 0x0000000000000100
+ -rs1Addr : 0x05
+  rs2Addr : 0x05
+  rdAddr : 0x00
+  exRdAddr : 0x00000005
+  exWbP : 0x1
+maPcReg: 0x000000e4
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000e0
+  regFile(0x00000005): 0x000000e0
+  wbWbData : 0x000000e0
+idExStallFlg :  1
+io.gp :           0
+---------
+
 ---------
 pc : 0x000000ec
-inst : 0x800002b7
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :   5
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000080000000
+  inst : 0x800002b7
+idPcReg: 0x000000e8
+  idInstReg : 0x30529073
+  rs1Data : 0x00000100
+  rs2Data : 0x00000100
+exPcReg: 0x000000e8
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x05
+  rs2Addr : 0x05
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x000000e4
+  io.dmem.wData: 0x00000100
+wbPcReg: 0x000000e4
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x000000f0
-pcPlus4 : 0x000000f4
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000000f0
-inst : 0xfff28293
-rs1_addr :   5
-rs2_addr :  31
-rd_addr :   5
-rs1Data : 0x80000000
-rs2Data : 0x00000000
-aluOut : 0x000000007fffffff
+  inst : 0xfff28293
+idPcReg: 0x000000ec
+  idInstReg : 0x800002b7
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000e8
+  exOp1Data : 0x00000100
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000100
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x05
+  exRdAddr : 0x00000000
+  exWbP : 0x5
+maPcReg: 0x000000e8
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000e4
+  regFile(0x00000005): 0x000000e0
+  wbWbData : 0x00000100
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
 pc : 0x000000f4
-pcPlus4 : 0x000000f8
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x3b0
-imm_z_uext :           5
-wbData :           2147483647
-csr[0x340] : 00000000
+  inst : 0x3b029073
+idPcReg: 0x000000f0
+  idInstReg : 0xfff28293
+  rs1Data : 0x00000100
+  rs2Data : 0x00000000
+exPcReg: 0x000000ec
+  exOp1Data : 0x00000000
+  exOp2Data : 0x80000000
+  aluOut : 0x0000000080000000
+ -rs1Addr : 0x05
+  rs2Addr : 0x1f
+  rdAddr : 0x05
+  exRdAddr : 0x00000005
+  exWbP : 0x1
+maPcReg: 0x000000e8
+  io.dmem.wData: 0x00000100
+wbPcReg: 0x000000e8
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  1
+io.gp :           0
+---------
+
 ---------
 pc : 0x000000f4
-inst : 0x3b029073
-rs1_addr :   5
-rs2_addr :  16
-rd_addr :   0
-rs1Data : 0x7fffffff
-rs2Data : 0x00000000
-aluOut : 0x000000007fffffff
+  inst : 0x3b029073
+idPcReg: 0x000000f0
+  idInstReg : 0xfff28293
+  rs1Data : 0x80000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000f0
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x05
+  rs2Addr : 0x1f
+  rdAddr : 0x05
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x000000ec
+  io.dmem.wData: 0x80000000
+wbPcReg: 0x000000e8
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000100
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
 pc : 0x000000f8
-pcPlus4 : 0x000000fc
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x01f00293
+idPcReg: 0x000000f4
+  idInstReg : 0x3b029073
+  rs1Data : 0x80000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000f0
+  exOp1Data : 0x80000000
+  exOp2Data : 0xffffffff
+  aluOut : 0x000000007fffffff
+ -rs1Addr : 0x05
+  rs2Addr : 0x10
+  rdAddr : 0x00
+  exRdAddr : 0x00000005
+  exWbP : 0x1
+maPcReg: 0x000000f0
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000ec
+  regFile(0x00000005): 0x00000100
+  wbWbData : 0x80000000
+idExStallFlg :  1
+io.gp :           0
+---------
+
 ---------
 pc : 0x000000f8
-inst : 0x01f00293
-rs1_addr :   0
-rs2_addr :  31
-rd_addr :   5
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000000001f
+  inst : 0x01f00293
+idPcReg: 0x000000f4
+  idInstReg : 0x3b029073
+  rs1Data : 0x7fffffff
+  rs2Data : 0x00000000
+exPcReg: 0x000000f4
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x05
+  rs2Addr : 0x10
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x000000f0
+  io.dmem.wData: 0x7fffffff
+wbPcReg: 0x000000f0
+  regFile(0x00000000): 0x000000e0
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x000000fc
-pcPlus4 : 0x00000100
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x3a0
-imm_z_uext :           5
-wbData :                   31
-csr[0x340] : 00000000
----------
-pc : 0x000000fc
-inst : 0x3a029073
-rs1_addr :   5
-rs2_addr :   0
-rd_addr :   0
-rs1Data : 0x0000001f
-rs2Data : 0x00000000
-aluOut : 0x000000000000001f
+  inst : 0x3a029073
+idPcReg: 0x000000f8
+  idInstReg : 0x01f00293
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000f4
+  exOp1Data : 0x7fffffff
+  exOp2Data : 0x00000000
+  aluOut : 0x000000007fffffff
+ -rs1Addr : 0x00
+  rs2Addr : 0x1f
+  rdAddr : 0x05
+  exRdAddr : 0x00000000
+  exWbP : 0x5
+maPcReg: 0x000000f4
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000f0
+  regFile(0x00000005): 0x80000000
+  wbWbData : 0x7fffffff
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000100
-pcPlus4 : 0x00000104
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x304
-imm_z_uext :           0
-wbData :                    0
-csr[0x340] : 00000000
+
+//////// STALL! ////////
 ---------
 pc : 0x00000100
-inst : 0x30405073
-rs1_addr :   0
-rs2_addr :   4
-rd_addr :   0
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x30405073
+idPcReg: 0x000000fc
+  idInstReg : 0x3a029073
+  rs1Data : 0x7fffffff
+  rs2Data : 0x00000000
+exPcReg: 0x000000f8
+  exOp1Data : 0x00000000
+  exOp2Data : 0x0000001f
+  aluOut : 0x000000000000001f
+ -rs1Addr : 0x05
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000005
+  exWbP : 0x1
+maPcReg: 0x000000f4
+  io.dmem.wData: 0x7fffffff
+wbPcReg: 0x000000f4
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  1
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
+pc : 0x00000100
+  inst : 0x30405073
+idPcReg: 0x000000fc
+  idInstReg : 0x3a029073
+  rs1Data : 0x0000001f
+  rs2Data : 0x00000000
+exPcReg: 0x000000fc
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x05
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x000000f8
+  io.dmem.wData: 0x0000001f
+wbPcReg: 0x000000f4
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x7fffffff
+idExStallFlg :  0
+io.gp :           0
+---------
+
+---------
 pc : 0x00000104
-pcPlus4 : 0x00000108
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000104
-inst : 0x00000297
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :   5
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000104
+  inst : 0x00000297
+idPcReg: 0x00000100
+  idInstReg : 0x30405073
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000000fc
+  exOp1Data : 0x0000001f
+  exOp2Data : 0x00000000
+  aluOut : 0x000000000000001f
+ -rs1Addr : 0x00
+  rs2Addr : 0x04
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x5
+maPcReg: 0x000000fc
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000f8
+  regFile(0x00000005): 0x7fffffff
+  wbWbData : 0x0000001f
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000108
-pcPlus4 : 0x0000010c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000108
-inst : 0x01428293
-rs1_addr :   5
-rs2_addr :  20
-rd_addr :   5
-rs1Data : 0x00000104
-rs2Data : 0x00000000
-aluOut : 0x0000000000000118
+  inst : 0x01428293
+idPcReg: 0x00000104
+  idInstReg : 0x00000297
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000100
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x05
+  exRdAddr : 0x00000000
+  exWbP : 0x5
+maPcReg: 0x000000fc
+  io.dmem.wData: 0x0000001f
+wbPcReg: 0x000000fc
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
 pc : 0x0000010c
-pcPlus4 : 0x00000110
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x305
-imm_z_uext :           5
-wbData :                  280
-csr[0x340] : 00000000
+  inst : 0x30529073
+idPcReg: 0x00000108
+  idInstReg : 0x01428293
+  rs1Data : 0x0000001f
+  rs2Data : 0x00000000
+exPcReg: 0x00000104
+  exOp1Data : 0x00000104
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000104
+ -rs1Addr : 0x05
+  rs2Addr : 0x14
+  rdAddr : 0x05
+  exRdAddr : 0x00000005
+  exWbP : 0x1
+maPcReg: 0x00000100
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000000fc
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x0000001f
+idExStallFlg :  1
+io.gp :           0
+---------
+
 ---------
 pc : 0x0000010c
-inst : 0x30529073
-rs1_addr :   5
-rs2_addr :   5
-rd_addr :   0
-rs1Data : 0x00000118
-rs2Data : 0x00000118
-aluOut : 0x0000000000000118
+  inst : 0x30529073
+idPcReg: 0x00000108
+  idInstReg : 0x01428293
+  rs1Data : 0x00000104
+  rs2Data : 0x00000000
+exPcReg: 0x00000108
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x05
+  rs2Addr : 0x14
+  rdAddr : 0x05
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000104
+  io.dmem.wData: 0x00000104
+wbPcReg: 0x00000100
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
 pc : 0x00000110
-pcPlus4 : 0x00000114
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x302
-imm_z_uext :           0
-wbData :                    0
-csr[0x340] : 00000000
+  inst : 0x30205073
+idPcReg: 0x0000010c
+  idInstReg : 0x30529073
+  rs1Data : 0x00000104
+  rs2Data : 0x00000104
+exPcReg: 0x00000108
+  exOp1Data : 0x00000104
+  exOp2Data : 0x00000014
+  aluOut : 0x0000000000000118
+ -rs1Addr : 0x05
+  rs2Addr : 0x05
+  rdAddr : 0x00
+  exRdAddr : 0x00000005
+  exWbP : 0x1
+maPcReg: 0x00000108
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000104
+  regFile(0x00000005): 0x0000001f
+  wbWbData : 0x00000104
+idExStallFlg :  1
+io.gp :           0
+---------
+
 ---------
 pc : 0x00000110
-inst : 0x30205073
-rs1_addr :   0
-rs2_addr :   2
-rd_addr :   0
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x30205073
+idPcReg: 0x0000010c
+  idInstReg : 0x30529073
+  rs1Data : 0x00000118
+  rs2Data : 0x00000118
+exPcReg: 0x0000010c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x05
+  rs2Addr : 0x05
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000108
+  io.dmem.wData: 0x00000118
+wbPcReg: 0x00000108
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000114
-pcPlus4 : 0x00000118
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x303
-imm_z_uext :           0
-wbData :                    0
-csr[0x340] : 00000000
----------
-pc : 0x00000114
-inst : 0x30305073
-rs1_addr :   0
-rs2_addr :   3
-rd_addr :   0
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x30305073
+idPcReg: 0x00000110
+  idInstReg : 0x30205073
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000010c
+  exOp1Data : 0x00000118
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000118
+ -rs1Addr : 0x00
+  rs2Addr : 0x02
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x5
+maPcReg: 0x0000010c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000108
+  regFile(0x00000005): 0x00000104
+  wbWbData : 0x00000118
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000118
-pcPlus4 : 0x0000011c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000118
-inst : 0x00000193
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :   3
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000193
+idPcReg: 0x00000114
+  idInstReg : 0x30305073
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000110
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x03
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x5
+maPcReg: 0x0000010c
+  io.dmem.wData: 0x00000118
+wbPcReg: 0x0000010c
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x0000011c
-pcPlus4 : 0x00000120
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x0000011c
-inst : 0x00000297
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :   5
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000000011c
+  inst : 0x00000297
+idPcReg: 0x00000118
+  idInstReg : 0x00000193
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000114
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x03
+  exRdAddr : 0x00000000
+  exWbP : 0x5
+maPcReg: 0x00000110
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x0000010c
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000118
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000120
-pcPlus4 : 0x00000124
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000120
-inst : 0xee828293
-rs1_addr :   5
-rs2_addr :   8
-rd_addr :   5
-rs1Data : 0x0000011c
-rs2Data : 0x00000000
-aluOut : 0x0000000000000004
+  inst : 0xee828293
+idPcReg: 0x0000011c
+  idInstReg : 0x00000297
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000118
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x05
+  exRdAddr : 0x00000003
+  exWbP : 0x1
+maPcReg: 0x00000114
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000110
+  regFile(0x00000000): 0x00000100
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
 pc : 0x00000124
-pcPlus4 : 0x00000128
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x305
-imm_z_uext :           5
-wbData :                    4
-csr[0x340] : 00000000
+  inst : 0x30529073
+idPcReg: 0x00000120
+  idInstReg : 0xee828293
+  rs1Data : 0x00000118
+  rs2Data : 0x00000000
+exPcReg: 0x0000011c
+  exOp1Data : 0x0000011c
+  exOp2Data : 0x00000000
+  aluOut : 0x000000000000011c
+ -rs1Addr : 0x05
+  rs2Addr : 0x08
+  rdAddr : 0x05
+  exRdAddr : 0x00000005
+  exWbP : 0x1
+maPcReg: 0x00000118
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000114
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  1
+io.gp :           0
+---------
+
 ---------
 pc : 0x00000124
-inst : 0x30529073
-rs1_addr :   5
-rs2_addr :   5
-rd_addr :   0
-rs1Data : 0x00000004
-rs2Data : 0x00000004
-aluOut : 0x0000000000000004
+  inst : 0x30529073
+idPcReg: 0x00000120
+  idInstReg : 0xee828293
+  rs1Data : 0x0000011c
+  rs2Data : 0x00000000
+exPcReg: 0x00000120
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x05
+  rs2Addr : 0x08
+  rdAddr : 0x05
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x0000011c
+  io.dmem.wData: 0x0000011c
+wbPcReg: 0x00000118
+  regFile(0x00000003): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
 pc : 0x00000128
-pcPlus4 : 0x0000012c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x00100513
+idPcReg: 0x00000124
+  idInstReg : 0x30529073
+  rs1Data : 0x0000011c
+  rs2Data : 0x0000011c
+exPcReg: 0x00000120
+  exOp1Data : 0x0000011c
+  exOp2Data : 0xfffffee8
+  aluOut : 0x0000000000000004
+ -rs1Addr : 0x05
+  rs2Addr : 0x05
+  rdAddr : 0x00
+  exRdAddr : 0x00000005
+  exWbP : 0x1
+maPcReg: 0x00000120
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x0000011c
+  regFile(0x00000005): 0x00000118
+  wbWbData : 0x0000011c
+idExStallFlg :  1
+io.gp :           0
+---------
+
 ---------
 pc : 0x00000128
-inst : 0x00100513
-rs1_addr :   0
-rs2_addr :   1
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000001
+  inst : 0x00100513
+idPcReg: 0x00000124
+  idInstReg : 0x30529073
+  rs1Data : 0x00000004
+  rs2Data : 0x00000004
+exPcReg: 0x00000124
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x05
+  rs2Addr : 0x05
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000120
+  io.dmem.wData: 0x00000004
+wbPcReg: 0x00000120
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x0000012c
-pcPlus4 : 0x00000130
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x0000012c
-inst : 0x01f51513
-rs1_addr :  10
-rs2_addr :  31
-rd_addr :  10
-rs1Data : 0x00000001
-rs2Data : 0x00000000
-aluOut : 0x0000000080000000
+  inst : 0x01f51513
+idPcReg: 0x00000128
+  idInstReg : 0x00100513
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000124
+  exOp1Data : 0x00000004
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000004
+ -rs1Addr : 0x00
+  rs2Addr : 0x01
+  rdAddr : 0x0a
+  exRdAddr : 0x00000000
+  exWbP : 0x5
+maPcReg: 0x00000124
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000120
+  regFile(0x00000005): 0x0000011c
+  wbWbData : 0x00000004
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
 pc : 0x00000130
-pcPlus4 : 0x00000134
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
+  inst : 0x00054c63
+idPcReg: 0x0000012c
+  idInstReg : 0x01f51513
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000128
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000001
+  aluOut : 0x0000000000000001
+ -rs1Addr : 0x0a
+  rs2Addr : 0x1f
+  rdAddr : 0x0a
+  exRdAddr : 0x0000000a
+  exWbP : 0x1
+maPcReg: 0x00000124
+  io.dmem.wData: 0x00000004
+wbPcReg: 0x00000124
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  1
+io.gp :           0
+---------
+
 ---------
 pc : 0x00000130
-inst : 0x00054c63
-rs1_addr :  10
-rs2_addr :   0
-rd_addr :  24
-rs1Data : 0x80000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000148
+  inst : 0x00054c63
+idPcReg: 0x0000012c
+  idInstReg : 0x01f51513
+  rs1Data : 0x00000001
+  rs2Data : 0x00000000
+exPcReg: 0x0000012c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x0a
+  rs2Addr : 0x1f
+  rdAddr : 0x0a
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000128
+  io.dmem.wData: 0x00000001
+wbPcReg: 0x00000124
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000004
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
+pc : 0x00000134
+  inst : 0x0ff0000f
+idPcReg: 0x00000130
+  idInstReg : 0x00054c63
+  rs1Data : 0x00000001
+  rs2Data : 0x00000000
+exPcReg: 0x0000012c
+  exOp1Data : 0x00000001
+  exOp2Data : 0x0000001f
+  aluOut : 0x0000000080000000
+ -rs1Addr : 0x0a
+  rs2Addr : 0x00
+  rdAddr : 0x18
+  exRdAddr : 0x0000000a
+  exWbP : 0x1
+maPcReg: 0x0000012c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000128
+  regFile(0x0000000a): 0x00000000
+  wbWbData : 0x00000001
+idExStallFlg :  1
+io.gp :           0
+---------
+
+---------
+pc : 0x00000134
+  inst : 0x0ff0000f
+idPcReg: 0x00000130
+  idInstReg : 0x00054c63
+  rs1Data : 0x80000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000130
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x0a
+  rs2Addr : 0x00
+  rdAddr : 0x18
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x0000012c
+  io.dmem.wData: 0x80000000
+wbPcReg: 0x0000012c
+  regFile(0x00000000): 0x00000118
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+<<<<<<<< PC change!: 0x0000000000000148 >>>>>>>>
+---------
+pc : 0x00000138
+  inst : 0x00100193
+idPcReg: 0x00000134
+  idInstReg : 0x0ff0000f
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000130
+  exOp1Data : 0x80000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000148
+ -rs1Addr : 0x00
+  rs2Addr : 0x1f
+  rdAddr : 0x00
+  exRdAddr : 0x00000018
+  exWbP : 0x3
+maPcReg: 0x00000130
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x0000012c
+  regFile(0x0000000a): 0x00000001
+  wbWbData : 0x80000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+---------
 pc : 0x00000148
-pcPlus4 : 0x0000014c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000148
-inst : 0x00000293
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :   5
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000293
+idPcReg: 0x00000138
+  idInstReg : 0x00000013
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000134
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000130
+  io.dmem.wData: 0x00000148
+wbPcReg: 0x00000130
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x0000014c
-pcPlus4 : 0x00000150
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
----------
-pc : 0x0000014c
-inst : 0x00028a63
-rs1_addr :   5
-rs2_addr :   0
-rd_addr :  20
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000160
+  inst : 0x00028a63
+idPcReg: 0x00000148
+  idInstReg : 0x00000293
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000138
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x05
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000134
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000130
+  regFile(0x00000018): 0x00000000
+  wbWbData : 0x00000148
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
+pc : 0x00000150
+  inst : 0x10529073
+idPcReg: 0x0000014c
+  idInstReg : 0x00028a63
+  rs1Data : 0x00000004
+  rs2Data : 0x00000000
+exPcReg: 0x00000148
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x05
+  rs2Addr : 0x00
+  rdAddr : 0x14
+  exRdAddr : 0x00000005
+  exWbP : 0x1
+maPcReg: 0x00000138
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000134
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  1
+io.gp :           0
+---------
+
+---------
+pc : 0x00000150
+  inst : 0x10529073
+idPcReg: 0x0000014c
+  idInstReg : 0x00028a63
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000014c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x05
+  rs2Addr : 0x00
+  rdAddr : 0x14
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000148
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000138
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+<<<<<<<< PC change!: 0x0000000000000160 >>>>>>>>
+---------
+pc : 0x00000154
+  inst : 0x0000b2b7
+idPcReg: 0x00000150
+  idInstReg : 0x10529073
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000014c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000160
+ -rs1Addr : 0x05
+  rs2Addr : 0x05
+  rdAddr : 0x00
+  exRdAddr : 0x00000014
+  exWbP : 0x3
+maPcReg: 0x0000014c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000148
+  regFile(0x00000005): 0x00000004
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+---------
 pc : 0x00000160
-pcPlus4 : 0x00000164
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x300
-imm_z_uext :           0
-wbData :                    0
-csr[0x340] : 00000000
----------
-pc : 0x00000160
-inst : 0x30005073
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :   0
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x30005073
+idPcReg: 0x00000154
+  idInstReg : 0x00000013
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000150
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x0000014c
+  io.dmem.wData: 0x00000160
+wbPcReg: 0x0000014c
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000164
-pcPlus4 : 0x00000168
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000164
-inst : 0x00002537
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000002000
+  inst : 0x00002537
+idPcReg: 0x00000160
+  idInstReg : 0x30005073
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000154
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000150
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x0000014c
+  regFile(0x00000014): 0x00000000
+  wbWbData : 0x00000160
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000168
-pcPlus4 : 0x0000016c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000168
-inst : 0x80050513
-rs1_addr :  10
-rs2_addr :   0
-rd_addr :  10
-rs1Data : 0x00002000
-rs2Data : 0x00000000
-aluOut : 0x0000000000001800
+  inst : 0x80050513
+idPcReg: 0x00000164
+  idInstReg : 0x00002537
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000160
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x0a
+  exRdAddr : 0x00000000
+  exWbP : 0x5
+maPcReg: 0x00000154
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000150
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
 pc : 0x0000016c
-pcPlus4 : 0x00000170
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-RCS_RS! aluOut:                 6144, csrRegFile(imm_i): 00000000, op1Data: 00001800
-CSR_RS! regFile(rdAddr):           0
-imm_i : 0x300
-imm_z_uext :          10
-wbData :                 6144
-csr[0x340] : 00000000
+  inst : 0x30052073
+idPcReg: 0x00000168
+  idInstReg : 0x80050513
+  rs1Data : 0x80000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000164
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00002000
+  aluOut : 0x0000000000002000
+ -rs1Addr : 0x0a
+  rs2Addr : 0x00
+  rdAddr : 0x0a
+  exRdAddr : 0x0000000a
+  exWbP : 0x1
+maPcReg: 0x00000160
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000154
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  1
+io.gp :           0
+---------
+
 ---------
 pc : 0x0000016c
-inst : 0x30052073
-rs1_addr :  10
-rs2_addr :   0
-rd_addr :   0
-rs1Data : 0x00001800
-rs2Data : 0x00000000
-aluOut : 0x0000000000001800
+  inst : 0x30052073
+idPcReg: 0x00000168
+  idInstReg : 0x80050513
+  rs1Data : 0x00002000
+  rs2Data : 0x00000000
+exPcReg: 0x00000168
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x0a
+  rs2Addr : 0x00
+  rdAddr : 0x0a
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000164
+  io.dmem.wData: 0x00002000
+wbPcReg: 0x00000160
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
 pc : 0x00000170
-pcPlus4 : 0x00000174
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x00000297
+idPcReg: 0x0000016c
+  idInstReg : 0x30052073
+  rs1Data : 0x00002000
+  rs2Data : 0x00000000
+exPcReg: 0x00000168
+  exOp1Data : 0x00002000
+  exOp2Data : 0xfffff800
+  aluOut : 0x0000000000001800
+ -rs1Addr : 0x0a
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x0000000a
+  exWbP : 0x1
+maPcReg: 0x00000168
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000164
+  regFile(0x0000000a): 0x80000000
+  wbWbData : 0x00002000
+idExStallFlg :  1
+io.gp :           0
+---------
+
 ---------
 pc : 0x00000170
-inst : 0x00000297
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :   5
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000170
+  inst : 0x00000297
+idPcReg: 0x0000016c
+  idInstReg : 0x30052073
+  rs1Data : 0x00001800
+  rs2Data : 0x00000000
+exPcReg: 0x0000016c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x0a
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000168
+  io.dmem.wData: 0x00001800
+wbPcReg: 0x00000168
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000174
-pcPlus4 : 0x00000178
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000174
-inst : 0x01428293
-rs1_addr :   5
-rs2_addr :  20
-rd_addr :   5
-rs1Data : 0x00000170
-rs2Data : 0x00000000
-aluOut : 0x0000000000000184
+  inst : 0x01428293
+idPcReg: 0x00000170
+  idInstReg : 0x00000297
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000016c
+  exOp1Data : 0x00001800
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000001800
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x05
+  exRdAddr : 0x00000000
+  exWbP : 0x5
+maPcReg: 0x0000016c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000168
+  regFile(0x0000000a): 0x00002000
+  wbWbData : 0x00001800
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
 pc : 0x00000178
-pcPlus4 : 0x0000017c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x341
-imm_z_uext :           5
-wbData :                  388
-csr[0x340] : 00000000
+  inst : 0x34129073
+idPcReg: 0x00000174
+  idInstReg : 0x01428293
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000170
+  exOp1Data : 0x00000170
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000170
+ -rs1Addr : 0x05
+  rs2Addr : 0x14
+  rdAddr : 0x05
+  exRdAddr : 0x00000005
+  exWbP : 0x1
+maPcReg: 0x0000016c
+  io.dmem.wData: 0x00001800
+wbPcReg: 0x0000016c
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  1
+io.gp :           0
+---------
+
 ---------
 pc : 0x00000178
-inst : 0x34129073
-rs1_addr :   5
-rs2_addr :   1
-rd_addr :   0
-rs1Data : 0x00000184
-rs2Data : 0x00000000
-aluOut : 0x0000000000000184
+  inst : 0x34129073
+idPcReg: 0x00000174
+  idInstReg : 0x01428293
+  rs1Data : 0x00000170
+  rs2Data : 0x00000000
+exPcReg: 0x00000174
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x05
+  rs2Addr : 0x14
+  rdAddr : 0x05
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000170
+  io.dmem.wData: 0x00000170
+wbPcReg: 0x0000016c
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00001800
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
 pc : 0x0000017c
-pcPlus4 : 0x00000180
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-RCS_RS! aluOut:                    0, csrRegFile(imm_i): 00000000, op1Data: 00000000
-CSR_RS! regFile(rdAddr):        6144
-imm_i : 0xf14
-imm_z_uext :           0
-wbData :                    0
-csr[0x340] : 00000000
+  inst : 0xf1402573
+idPcReg: 0x00000178
+  idInstReg : 0x34129073
+  rs1Data : 0x00000170
+  rs2Data : 0x00000000
+exPcReg: 0x00000174
+  exOp1Data : 0x00000170
+  exOp2Data : 0x00000014
+  aluOut : 0x0000000000000184
+ -rs1Addr : 0x05
+  rs2Addr : 0x01
+  rdAddr : 0x00
+  exRdAddr : 0x00000005
+  exWbP : 0x1
+maPcReg: 0x00000174
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000170
+  regFile(0x00000005): 0x00000000
+  wbWbData : 0x00000170
+idExStallFlg :  1
+io.gp :           0
+---------
+
 ---------
 pc : 0x0000017c
-inst : 0xf1402573
-rs1_addr :   0
-rs2_addr :  20
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0xf1402573
+idPcReg: 0x00000178
+  idInstReg : 0x34129073
+  rs1Data : 0x00000184
+  rs2Data : 0x00000000
+exPcReg: 0x00000178
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x05
+  rs2Addr : 0x01
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000174
+  io.dmem.wData: 0x00000184
+wbPcReg: 0x00000174
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000180
-pcPlus4 : 0x00000184
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000180
-inst : 0x30200073
-rs1_addr :   0
-rs2_addr :   2
-rd_addr :   0
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x30200073
+idPcReg: 0x0000017c
+  idInstReg : 0xf1402573
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000178
+  exOp1Data : 0x00000184
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000184
+ -rs1Addr : 0x00
+  rs2Addr : 0x14
+  rdAddr : 0x0a
+  exRdAddr : 0x00000000
+  exWbP : 0x5
+maPcReg: 0x00000178
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000174
+  regFile(0x00000005): 0x00000170
+  wbWbData : 0x00000184
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000184
-pcPlus4 : 0x00000188
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x340
-imm_z_uext :           0
-wbData :                    0
-csr[0x340] : 00000000
----------
-pc : 0x00000184
-inst : 0x34001073
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :   0
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x34001073
+idPcReg: 0x00000180
+  idInstReg : 0x30200073
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000017c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x02
+  rdAddr : 0x00
+  exRdAddr : 0x0000000a
+  exWbP : 0x5
+maPcReg: 0x00000178
+  io.dmem.wData: 0x00000184
+wbPcReg: 0x00000178
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000188
-pcPlus4 : 0x0000018c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-RCS_RS! aluOut:                    0, csrRegFile(imm_i): 00000000, op1Data: 00000000
-CSR_RS! regFile(rdAddr):           0
-imm_i : 0x340
-imm_z_uext :           0
-wbData :                    0
-csr[0x340] : 00000000
+
 ---------
 pc : 0x00000188
-inst : 0x34002573
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x34002573
+idPcReg: 0x00000184
+  idInstReg : 0x34001073
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000180
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x0
+maPcReg: 0x0000017c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000178
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000184
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x0000018c
-pcPlus4 : 0x00000190
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x0000018c
-inst : 0x00000393
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :   7
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000393
+idPcReg: 0x00000188
+  idInstReg : 0x34002573
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000184
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x0a
+  exRdAddr : 0x00000000
+  exWbP : 0x5
+maPcReg: 0x00000180
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x0000017c
+  regFile(0x0000000a): 0x00001800
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000190
-pcPlus4 : 0x00000194
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ---------
 pc : 0x00000190
-inst : 0x01400193
-rs1_addr :   0
-rs2_addr :  20
-rd_addr :   3
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000014
+  inst : 0x01400193
+idPcReg: 0x0000018c
+  idInstReg : 0x00000393
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000188
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x07
+  exRdAddr : 0x0000000a
+  exWbP : 0x5
+maPcReg: 0x00000184
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000180
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           0
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000194
-pcPlus4 : 0x00000198
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
+
 ---------
 pc : 0x00000194
-inst : 0x1a751863
-rs1_addr :  10
-rs2_addr :   7
-rd_addr :  16
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000198
-io.gp :          20
-csr[0x340] : 00000000
+  inst : 0x1a751863
+idPcReg: 0x00000190
+  idInstReg : 0x01400193
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000018c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x14
+  rdAddr : 0x03
+  exRdAddr : 0x00000007
+  exWbP : 0x1
+maPcReg: 0x00000188
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000184
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000198
-pcPlus4 : 0x0000019c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x340
-imm_z_uext :           0
-wbData :                    0
-csr[0x340] : 00000000
+  inst : 0x34005573
+idPcReg: 0x00000194
+  idInstReg : 0x1a751863
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000190
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000014
+  aluOut : 0x0000000000000014
+ -rs1Addr : 0x0a
+  rs2Addr : 0x07
+  rdAddr : 0x10
+  exRdAddr : 0x00000003
+  exWbP : 0x1
+maPcReg: 0x0000018c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000188
+  regFile(0x0000000a): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
+<<<<<<<< PC change!: 0x0000000000000198 >>>>>>>>
+---------
+pc : 0x0000019c
+  inst : 0x3407d573
+idPcReg: 0x00000198
+  idInstReg : 0x34005573
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000194
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000198
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x0a
+  exRdAddr : 0x00000010
+  exWbP : 0x3
+maPcReg: 0x00000190
+  io.dmem.wData: 0x00000014
+wbPcReg: 0x0000018c
+  regFile(0x00000007): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           0
+---------
+
 ---------
 pc : 0x00000198
-inst : 0x34005573
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
-io.gp :          20
-csr[0x340] : 00000000
+  inst : 0x34005573
+idPcReg: 0x0000019c
+  idInstReg : 0x00000013
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000198
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000194
+  io.dmem.wData: 0x00000198
+wbPcReg: 0x00000190
+  regFile(0x00000003): 0x00000000
+  wbWbData : 0x00000014
+idExStallFlg :  0
+io.gp :           0
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x0000019c
-pcPlus4 : 0x000001a0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x340
-imm_z_uext :          15
-wbData :                   15
-csr[0x340] : 00000000
----------
-pc : 0x0000019c
-inst : 0x3407d573
-rs1_addr :  15
-rs2_addr :   0
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000000000f
+  inst : 0x3407d573
+idPcReg: 0x00000198
+  idInstReg : 0x34005573
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000019c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x0a
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000198
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000194
+  regFile(0x00000010): 0x00000000
+  wbWbData : 0x00000198
+idExStallFlg :  0
 io.gp :          20
-csr[0x340] : 00000000
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x000001a0
-pcPlus4 : 0x000001a4
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000001a0
-inst : 0x00000393
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :   7
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
+  inst : 0x00000393
+idPcReg: 0x0000019c
+  idInstReg : 0x3407d573
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000198
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x0f
+  rs2Addr : 0x00
+  rdAddr : 0x0a
+  exRdAddr : 0x0000000a
+  exWbP : 0x5
+maPcReg: 0x0000019c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000198
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :          20
-csr[0x340] : 0000000f
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001a4
-pcPlus4 : 0x000001a8
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ---------
 pc : 0x000001a4
-inst : 0x01500193
-rs1_addr :   0
-rs2_addr :  21
-rd_addr :   3
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000015
+  inst : 0x01500193
+idPcReg: 0x000001a0
+  idInstReg : 0x00000393
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000019c
+  exOp1Data : 0x0000000f
+  exOp2Data : 0x00000000
+  aluOut : 0x000000000000000f
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x07
+  exRdAddr : 0x0000000a
+  exWbP : 0x5
+maPcReg: 0x00000198
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x0000019c
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :          20
-csr[0x340] : 0000000f
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001a8
-pcPlus4 : 0x000001ac
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
+
 ---------
 pc : 0x000001a8
-inst : 0x18751e63
-rs1_addr :  10
-rs2_addr :   7
-rd_addr :  28
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x00000000000001ac
-io.gp :          21
-csr[0x340] : 0000000f
+  inst : 0x18751e63
+idPcReg: 0x000001a4
+  idInstReg : 0x01500193
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000001a0
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x15
+  rdAddr : 0x03
+  exRdAddr : 0x00000007
+  exWbP : 0x1
+maPcReg: 0x0000019c
+  io.dmem.wData: 0x0000000f
+wbPcReg: 0x00000198
+  regFile(0x0000000a): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :          20
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x000001ac
-pcPlus4 : 0x000001b0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x340
-imm_z_uext :           3
-wbData :                    3
-csr[0x340] : 0000000f
+  inst : 0x3401d073
+idPcReg: 0x000001a8
+  idInstReg : 0x18751e63
+  rs1Data : 0x0000000f
+  rs2Data : 0x00000000
+exPcReg: 0x000001a4
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000015
+  aluOut : 0x0000000000000015
+ -rs1Addr : 0x0a
+  rs2Addr : 0x07
+  rdAddr : 0x1c
+  exRdAddr : 0x00000003
+  exWbP : 0x1
+maPcReg: 0x000001a0
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x0000019c
+  regFile(0x0000000a): 0x00000000
+  wbWbData : 0x0000000f
+idExStallFlg :  0
+io.gp :          20
 ---------
-pc : 0x000001ac
-inst : 0x3401d073
-rs1_addr :   3
-rs2_addr :   0
-rd_addr :   0
-rs1Data : 0x00000015
-rs2Data : 0x00000000
-aluOut : 0x0000000000000003
-io.gp :          21
-csr[0x340] : 0000000f
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001b0
-pcPlus4 : 0x000001b4
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-RCS_RS! aluOut:                    3, csrRegFile(imm_i): 00000003, op1Data: 00000000
-CSR_RS! regFile(rdAddr):           0
-imm_i : 0x340
-imm_z_uext :           0
-wbData :                    3
-csr[0x340] : 00000003
+
+<<<<<<<< PC change!: 0x0000000000000344 >>>>>>>>
 ---------
 pc : 0x000001b0
-inst : 0x34002573
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000003
+  inst : 0x34002573
+idPcReg: 0x000001ac
+  idInstReg : 0x3401d073
+  rs1Data : 0x00000015
+  rs2Data : 0x00000000
+exPcReg: 0x000001a8
+  exOp1Data : 0x0000000f
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000344
+ -rs1Addr : 0x03
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x0000001c
+  exWbP : 0x3
+maPcReg: 0x000001a4
+  io.dmem.wData: 0x00000015
+wbPcReg: 0x000001a0
+  regFile(0x00000007): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :          20
+---------
+
+---------
+pc : 0x00000344
+  inst : 0x0ff0000f
+idPcReg: 0x000001b0
+  idInstReg : 0x00000013
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000001ac
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x000001a8
+  io.dmem.wData: 0x00000344
+wbPcReg: 0x000001a4
+  regFile(0x00000003): 0x00000014
+  wbWbData : 0x00000015
+idExStallFlg :  0
+io.gp :          20
+---------
+
+---------
+pc : 0x00000348
+  inst : 0x00018063
+idPcReg: 0x00000344
+  idInstReg : 0x0ff0000f
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x000001b0
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x1f
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x000001ac
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000001a8
+  regFile(0x0000001c): 0x00000000
+  wbWbData : 0x00000344
+idExStallFlg :  0
 io.gp :          21
-csr[0x340] : 00000003
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001b4
-pcPlus4 : 0x000001b8
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ---------
-pc : 0x000001b4
-inst : 0x00300393
-rs1_addr :   0
-rs2_addr :   3
-rd_addr :   7
-rs1Data : 0x00000000
-rs2Data : 0x00000015
-aluOut : 0x0000000000000003
+pc : 0x0000034c
+  inst : 0x00119193
+idPcReg: 0x00000348
+  idInstReg : 0x00018063
+  rs1Data : 0x00000015
+  rs2Data : 0x00000000
+exPcReg: 0x00000344
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x03
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x0
+maPcReg: 0x000001b0
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000001ac
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :          21
-csr[0x340] : 00000003
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001b8
-pcPlus4 : 0x000001bc
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+<<<<<<<< PC change!: 0x000000000000034c >>>>>>>>
 ---------
-pc : 0x000001b8
-inst : 0x00200193
-rs1_addr :   0
-rs2_addr :   2
-rd_addr :   3
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000002
+pc : 0x00000350
+  inst : 0x0011e193
+idPcReg: 0x0000034c
+  idInstReg : 0x00119193
+  rs1Data : 0x00000015
+  rs2Data : 0x00000000
+exPcReg: 0x00000348
+  exOp1Data : 0x00000015
+  exOp2Data : 0x00000000
+  aluOut : 0x000000000000034c
+ -rs1Addr : 0x03
+  rs2Addr : 0x01
+  rdAddr : 0x03
+  exRdAddr : 0x00000000
+  exWbP : 0x3
+maPcReg: 0x00000344
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x000001b0
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :          21
-csr[0x340] : 00000003
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001bc
-pcPlus4 : 0x000001c0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
----------
-pc : 0x000001bc
-inst : 0x18751463
-rs1_addr :  10
-rs2_addr :   7
-rd_addr :   8
-rs1Data : 0x00000003
-rs2Data : 0x00000003
-aluOut : 0x00000000000001c0
-io.gp :           2
-csr[0x340] : 00000003
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001c0
-pcPlus4 : 0x000001c4
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x340
-imm_z_uext :           1
-wbData :                    2
-csr[0x340] : 00000003
----------
-pc : 0x000001c0
-inst : 0x3400f5f3
-rs1_addr :   1
-rs2_addr :   0
-rd_addr :  11
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000002
-io.gp :           2
-csr[0x340] : 00000003
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001c4
-pcPlus4 : 0x000001c8
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000001c4
-inst : 0x00300393
-rs1_addr :   0
-rs2_addr :   3
-rd_addr :   7
-rs1Data : 0x00000000
-rs2Data : 0x00000002
-aluOut : 0x0000000000000003
-io.gp :           2
-csr[0x340] : 00000002
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001c8
-pcPlus4 : 0x000001cc
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000001c8
-inst : 0x00300193
-rs1_addr :   0
-rs2_addr :   3
-rd_addr :   3
-rs1Data : 0x00000000
-rs2Data : 0x00000002
-aluOut : 0x0000000000000003
-io.gp :           2
-csr[0x340] : 00000002
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001cc
-pcPlus4 : 0x000001d0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
----------
-pc : 0x000001cc
-inst : 0x16759c63
-rs1_addr :  11
-rs2_addr :   7
-rd_addr :  24
-rs1Data : 0x00000003
-rs2Data : 0x00000003
-aluOut : 0x00000000000001d0
-io.gp :           3
-csr[0x340] : 00000002
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001d0
-pcPlus4 : 0x000001d4
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-RCS_RS! aluOut:                    6, csrRegFile(imm_i): 00000002, op1Data: 00000004
-CSR_RS! regFile(rdAddr):           0
-imm_i : 0x340
-imm_z_uext :           4
-wbData :                    6
-csr[0x340] : 00000002
----------
-pc : 0x000001d0
-inst : 0x34026673
-rs1_addr :   4
-rs2_addr :   0
-rd_addr :  12
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000006
-io.gp :           3
-csr[0x340] : 00000002
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001d4
-pcPlus4 : 0x000001d8
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000001d4
-inst : 0x00200393
-rs1_addr :   0
-rs2_addr :   2
-rd_addr :   7
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000002
-io.gp :           3
-csr[0x340] : 00000006
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001d8
-pcPlus4 : 0x000001dc
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000001d8
-inst : 0x00400193
-rs1_addr :   0
-rs2_addr :   4
-rd_addr :   3
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000004
-io.gp :           3
-csr[0x340] : 00000006
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001dc
-pcPlus4 : 0x000001e0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
----------
-pc : 0x000001dc
-inst : 0x16761463
-rs1_addr :  12
-rs2_addr :   7
-rd_addr :   8
-rs1Data : 0x00000002
-rs2Data : 0x00000002
-aluOut : 0x00000000000001e0
-io.gp :           4
-csr[0x340] : 00000006
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001e0
-pcPlus4 : 0x000001e4
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x340
-imm_z_uext :           2
-wbData :                    2
-csr[0x340] : 00000006
----------
-pc : 0x000001e0
-inst : 0x340156f3
-rs1_addr :   2
-rs2_addr :   0
-rd_addr :  13
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000002
-io.gp :           4
-csr[0x340] : 00000006
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001e4
-pcPlus4 : 0x000001e8
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000001e4
-inst : 0x00600393
-rs1_addr :   0
-rs2_addr :   6
-rd_addr :   7
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000006
-io.gp :           4
-csr[0x340] : 00000002
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001e8
-pcPlus4 : 0x000001ec
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000001e8
-inst : 0x00500193
-rs1_addr :   0
-rs2_addr :   5
-rd_addr :   3
-rs1Data : 0x00000000
-rs2Data : 0x00000184
-aluOut : 0x0000000000000005
-io.gp :           4
-csr[0x340] : 00000002
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001ec
-pcPlus4 : 0x000001f0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
----------
-pc : 0x000001ec
-inst : 0x14769c63
-rs1_addr :  13
-rs2_addr :   7
-rd_addr :  24
-rs1Data : 0x00000006
-rs2Data : 0x00000006
-aluOut : 0x00000000000001f0
-io.gp :           5
-csr[0x340] : 00000002
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001f0
-pcPlus4 : 0x000001f4
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000001f0
-inst : 0x0bad2537
-rs1_addr :  26
-rs2_addr :  26
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000bad2000
-io.gp :           5
-csr[0x340] : 00000002
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001f4
-pcPlus4 : 0x000001f8
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000001f4
-inst : 0xdea50513
-rs1_addr :  10
-rs2_addr :  10
-rd_addr :  10
-rs1Data : 0x0bad2000
-rs2Data : 0x0bad2000
-aluOut : 0x000000000bad1dea
-io.gp :           5
-csr[0x340] : 00000002
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001f8
-pcPlus4 : 0x000001fc
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x340
-imm_z_uext :          10
-wbData :            195894762
-csr[0x340] : 00000002
----------
-pc : 0x000001f8
-inst : 0x340515f3
-rs1_addr :  10
-rs2_addr :   0
-rd_addr :  11
-rs1Data : 0x0bad1dea
-rs2Data : 0x00000000
-aluOut : 0x000000000bad1dea
-io.gp :           5
-csr[0x340] : 00000002
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000001fc
-pcPlus4 : 0x00000200
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000001fc
-inst : 0x00200393
-rs1_addr :   0
-rs2_addr :   2
-rd_addr :   7
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000002
-io.gp :           5
-csr[0x340] : 0bad1dea
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000200
-pcPlus4 : 0x00000204
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000200
-inst : 0x00600193
-rs1_addr :   0
-rs2_addr :   6
-rd_addr :   3
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000006
-io.gp :           5
-csr[0x340] : 0bad1dea
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000204
-pcPlus4 : 0x00000208
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
----------
-pc : 0x00000204
-inst : 0x14759063
-rs1_addr :  11
-rs2_addr :   7
-rd_addr :   0
-rs1Data : 0x00000002
-rs2Data : 0x00000002
-aluOut : 0x0000000000000208
-io.gp :           6
-csr[0x340] : 0bad1dea
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000208
-pcPlus4 : 0x0000020c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000208
-inst : 0x00002537
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000002000
-io.gp :           6
-csr[0x340] : 0bad1dea
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x0000020c
-pcPlus4 : 0x00000210
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x0000020c
-inst : 0xdea50513
-rs1_addr :  10
-rs2_addr :  10
-rd_addr :  10
-rs1Data : 0x00002000
-rs2Data : 0x00002000
-aluOut : 0x0000000000001dea
-io.gp :           6
-csr[0x340] : 0bad1dea
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000210
-pcPlus4 : 0x00000214
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x340
-imm_z_uext :          10
-wbData :            195887104
-csr[0x340] : 0bad1dea
----------
-pc : 0x00000210
-inst : 0x340535f3
-rs1_addr :  10
-rs2_addr :   0
-rd_addr :  11
-rs1Data : 0x00001dea
-rs2Data : 0x00000000
-aluOut : 0x000000000bad0000
-io.gp :           6
-csr[0x340] : 0bad1dea
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000214
-pcPlus4 : 0x00000218
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000214
-inst : 0x0bad23b7
-rs1_addr :  26
-rs2_addr :  26
-rd_addr :   7
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000bad2000
-io.gp :           6
-csr[0x340] : 0bad0000
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000218
-pcPlus4 : 0x0000021c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000218
-inst : 0xdea38393
-rs1_addr :   7
-rs2_addr :  10
-rd_addr :   7
-rs1Data : 0x0bad2000
-rs2Data : 0x00001dea
-aluOut : 0x000000000bad1dea
-io.gp :           6
-csr[0x340] : 0bad0000
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x0000021c
-pcPlus4 : 0x00000220
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x0000021c
-inst : 0x00700193
-rs1_addr :   0
-rs2_addr :   7
-rd_addr :   3
-rs1Data : 0x00000000
-rs2Data : 0x0bad1dea
-aluOut : 0x0000000000000007
-io.gp :           6
-csr[0x340] : 0bad0000
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000220
-pcPlus4 : 0x00000224
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
----------
-pc : 0x00000220
-inst : 0x12759263
-rs1_addr :  11
-rs2_addr :   7
-rd_addr :   4
-rs1Data : 0x0bad1dea
-rs2Data : 0x0bad1dea
-aluOut : 0x0000000000000224
-io.gp :           7
-csr[0x340] : 0bad0000
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000224
-pcPlus4 : 0x00000228
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000224
-inst : 0x0000c537
-rs1_addr :   1
-rs2_addr :   0
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000000c000
-io.gp :           7
-csr[0x340] : 0bad0000
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000228
-pcPlus4 : 0x0000022c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000228
-inst : 0xeef50513
-rs1_addr :  10
-rs2_addr :  15
-rd_addr :  10
-rs1Data : 0x0000c000
-rs2Data : 0x00000000
-aluOut : 0x000000000000beef
-io.gp :           7
-csr[0x340] : 0bad0000
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x0000022c
-pcPlus4 : 0x00000230
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-RCS_RS! aluOut:            195935983, csrRegFile(imm_i): 0bad0000, op1Data: 0000beef
-CSR_RS! regFile(rdAddr):   195894762
-imm_i : 0x340
-imm_z_uext :          10
-wbData :            195935983
-csr[0x340] : 0bad0000
----------
-pc : 0x0000022c
-inst : 0x340525f3
-rs1_addr :  10
-rs2_addr :   0
-rd_addr :  11
-rs1Data : 0x0000beef
-rs2Data : 0x00000000
-aluOut : 0x000000000badbeef
-io.gp :           7
-csr[0x340] : 0bad0000
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000230
-pcPlus4 : 0x00000234
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000230
-inst : 0x0bad03b7
-rs1_addr :  26
-rs2_addr :  26
-rd_addr :   7
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000bad0000
-io.gp :           7
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000234
-pcPlus4 : 0x00000238
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000234
-inst : 0x00800193
-rs1_addr :   0
-rs2_addr :   8
-rd_addr :   3
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000008
-io.gp :           7
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000238
-pcPlus4 : 0x0000023c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
----------
-pc : 0x00000238
-inst : 0x10759663
-rs1_addr :  11
-rs2_addr :   7
-rd_addr :  12
-rs1Data : 0x0bad0000
-rs2Data : 0x0bad0000
-aluOut : 0x000000000000023c
-io.gp :           8
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x0000023c
-pcPlus4 : 0x00000240
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x0000023c
-inst : 0x0bad2537
-rs1_addr :  26
-rs2_addr :  26
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000bad2000
-io.gp :           8
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000240
-pcPlus4 : 0x00000244
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000240
-inst : 0xdea50513
-rs1_addr :  10
-rs2_addr :  10
-rd_addr :  10
-rs1Data : 0x0bad2000
-rs2Data : 0x0bad2000
-aluOut : 0x000000000bad1dea
-io.gp :           8
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000244
-pcPlus4 : 0x00000248
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x340
-imm_z_uext :          10
-wbData :            195894762
-csr[0x340] : 0badbeef
----------
-pc : 0x00000244
-inst : 0x34051573
-rs1_addr :  10
-rs2_addr :   0
-rd_addr :  10
-rs1Data : 0x0bad1dea
-rs2Data : 0x00000000
-aluOut : 0x000000000bad1dea
-io.gp :           8
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000248
-pcPlus4 : 0x0000024c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000248
-inst : 0x0badc3b7
-rs1_addr :  27
-rs2_addr :  26
-rd_addr :   7
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000badc000
-io.gp :           8
-csr[0x340] : 0bad1dea
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x0000024c
-pcPlus4 : 0x00000250
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x0000024c
-inst : 0xeef38393
-rs1_addr :   7
-rs2_addr :  15
-rd_addr :   7
-rs1Data : 0x0badc000
-rs2Data : 0x00000000
-aluOut : 0x000000000badbeef
-io.gp :           8
-csr[0x340] : 0bad1dea
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000250
-pcPlus4 : 0x00000254
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000250
-inst : 0x00900193
-rs1_addr :   0
-rs2_addr :   9
-rd_addr :   3
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000009
-io.gp :           8
-csr[0x340] : 0bad1dea
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000254
-pcPlus4 : 0x00000258
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
----------
-pc : 0x00000254
-inst : 0x0e751863
-rs1_addr :  10
-rs2_addr :   7
-rd_addr :  16
-rs1Data : 0x0badbeef
-rs2Data : 0x0badbeef
-aluOut : 0x0000000000000258
-io.gp :           9
-csr[0x340] : 0bad1dea
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000258
-pcPlus4 : 0x0000025c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000258
-inst : 0x00002537
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000002000
-io.gp :           9
-csr[0x340] : 0bad1dea
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x0000025c
-pcPlus4 : 0x00000260
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x0000025c
-inst : 0xdea50513
-rs1_addr :  10
-rs2_addr :  10
-rd_addr :  10
-rs1Data : 0x00002000
-rs2Data : 0x00002000
-aluOut : 0x0000000000001dea
-io.gp :           9
-csr[0x340] : 0bad1dea
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000260
-pcPlus4 : 0x00000264
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imm_i : 0x340
-imm_z_uext :          10
-wbData :            195887104
-csr[0x340] : 0bad1dea
----------
-pc : 0x00000260
-inst : 0x34053573
-rs1_addr :  10
-rs2_addr :   0
-rd_addr :  10
-rs1Data : 0x00001dea
-rs2Data : 0x00000000
-aluOut : 0x000000000bad0000
-io.gp :           9
-csr[0x340] : 0bad1dea
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000264
-pcPlus4 : 0x00000268
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000264
-inst : 0x0bad23b7
-rs1_addr :  26
-rs2_addr :  26
-rd_addr :   7
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000bad2000
-io.gp :           9
-csr[0x340] : 0bad0000
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000268
-pcPlus4 : 0x0000026c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000268
-inst : 0xdea38393
-rs1_addr :   7
-rs2_addr :  10
-rd_addr :   7
-rs1Data : 0x0bad2000
-rs2Data : 0x0bad1dea
-aluOut : 0x000000000bad1dea
-io.gp :           9
-csr[0x340] : 0bad0000
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x0000026c
-pcPlus4 : 0x00000270
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x0000026c
-inst : 0x00a00193
-rs1_addr :   0
-rs2_addr :  10
-rd_addr :   3
-rs1Data : 0x00000000
-rs2Data : 0x0bad1dea
-aluOut : 0x000000000000000a
-io.gp :           9
-csr[0x340] : 0bad0000
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000270
-pcPlus4 : 0x00000274
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
----------
-pc : 0x00000270
-inst : 0x0c751a63
-rs1_addr :  10
-rs2_addr :   7
-rd_addr :  20
-rs1Data : 0x0bad1dea
-rs2Data : 0x0bad1dea
-aluOut : 0x0000000000000274
-io.gp :          10
-csr[0x340] : 0bad0000
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000274
-pcPlus4 : 0x00000278
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000274
-inst : 0x0000c537
-rs1_addr :   1
-rs2_addr :   0
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000000c000
-io.gp :          10
-csr[0x340] : 0bad0000
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000278
-pcPlus4 : 0x0000027c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000278
-inst : 0xeef50513
-rs1_addr :  10
-rs2_addr :  15
-rd_addr :  10
-rs1Data : 0x0000c000
-rs2Data : 0x00000000
-aluOut : 0x000000000000beef
-io.gp :          10
-csr[0x340] : 0bad0000
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x0000027c
-pcPlus4 : 0x00000280
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-RCS_RS! aluOut:            195935983, csrRegFile(imm_i): 0bad0000, op1Data: 0000beef
-CSR_RS! regFile(rdAddr):       48879
-imm_i : 0x340
-imm_z_uext :          10
-wbData :            195935983
-csr[0x340] : 0bad0000
----------
-pc : 0x0000027c
-inst : 0x34052573
-rs1_addr :  10
-rs2_addr :   0
-rd_addr :  10
-rs1Data : 0x0000beef
-rs2Data : 0x00000000
-aluOut : 0x000000000badbeef
-io.gp :          10
-csr[0x340] : 0bad0000
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000280
-pcPlus4 : 0x00000284
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000280
-inst : 0x0bad03b7
-rs1_addr :  26
-rs2_addr :  26
-rd_addr :   7
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000bad0000
-io.gp :          10
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000284
-pcPlus4 : 0x00000288
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000284
-inst : 0x00b00193
-rs1_addr :   0
-rs2_addr :  11
-rd_addr :   3
-rs1Data : 0x00000000
-rs2Data : 0x0bad0000
-aluOut : 0x000000000000000b
-io.gp :          10
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000288
-pcPlus4 : 0x0000028c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
----------
-pc : 0x00000288
-inst : 0x0a751e63
-rs1_addr :  10
-rs2_addr :   7
-rd_addr :  28
-rs1Data : 0x0bad0000
-rs2Data : 0x0bad0000
-aluOut : 0x000000000000028c
-io.gp :          11
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x0000028c
-pcPlus4 : 0x00000290
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-RCS_RS! aluOut:            195935983, csrRegFile(imm_i): 0badbeef, op1Data: 00000000
-CSR_RS! regFile(rdAddr):   195887104
-imm_i : 0x340
-imm_z_uext :           0
-wbData :            195935983
-csr[0x340] : 0badbeef
----------
-pc : 0x0000028c
-inst : 0x34002573
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000badbeef
-io.gp :          11
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000290
-pcPlus4 : 0x00000294
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000290
-inst : 0x0badc3b7
-rs1_addr :  27
-rs2_addr :  26
-rd_addr :   7
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000badc000
-io.gp :          11
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000294
-pcPlus4 : 0x00000298
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000294
-inst : 0xeef38393
-rs1_addr :   7
-rs2_addr :  15
-rd_addr :   7
-rs1Data : 0x0badc000
-rs2Data : 0x00000000
-aluOut : 0x000000000badbeef
-io.gp :          11
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000298
-pcPlus4 : 0x0000029c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000298
-inst : 0x00c00193
-rs1_addr :   0
-rs2_addr :  12
-rd_addr :   3
-rs1Data : 0x00000000
-rs2Data : 0x00000002
-aluOut : 0x000000000000000c
-io.gp :          11
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x0000029c
-pcPlus4 : 0x000002a0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
----------
-pc : 0x0000029c
-inst : 0x0a751463
-rs1_addr :  10
-rs2_addr :   7
-rd_addr :   8
-rs1Data : 0x0badbeef
-rs2Data : 0x0badbeef
-aluOut : 0x00000000000002a0
-io.gp :          12
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000002a0
-pcPlus4 : 0x000002a4
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-RCS_RS! aluOut:                    0, csrRegFile(imm_i): 00000000, op1Data: 00000000
-CSR_RS! regFile(rdAddr):   195935983
-imm_i : 0x301
-imm_z_uext :           0
-wbData :                    0
-csr[0x340] : 0badbeef
----------
-pc : 0x000002a0
-inst : 0x30102573
-rs1_addr :   0
-rs2_addr :   1
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
-io.gp :          12
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000002a4
-pcPlus4 : 0x000002a8
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000002a4
-inst : 0x02057513
-rs1_addr :  10
-rs2_addr :   0
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
-io.gp :          12
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000002a8
-pcPlus4 : 0x000002ac
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
----------
-pc : 0x000002a8
-inst : 0x02050863
-rs1_addr :  10
-rs2_addr :   0
-rd_addr :  16
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x00000000000002d8
-io.gp :          12
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000002d8
-pcPlus4 : 0x000002dc
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-RCS_RS! aluOut:                    0, csrRegFile(imm_i): 00000000, op1Data: 00000000
-CSR_RS! regFile(rdAddr):           0
-imm_i : 0x301
-imm_z_uext :           0
-wbData :                    0
-csr[0x340] : 0badbeef
----------
-pc : 0x000002d8
-inst : 0x30102573
-rs1_addr :   0
-rs2_addr :   1
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
-io.gp :          12
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000002dc
-pcPlus4 : 0x000002e0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000002dc
-inst : 0x01455513
-rs1_addr :  10
-rs2_addr :  20
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
-io.gp :          12
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000002e0
-pcPlus4 : 0x000002e4
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x000002e0
-inst : 0x00157513
-rs1_addr :  10
-rs2_addr :   1
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
-io.gp :          12
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x000002e4
-pcPlus4 : 0x000002e8
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
----------
-pc : 0x000002e4
-inst : 0x04050463
-rs1_addr :  10
-rs2_addr :   0
-rd_addr :   8
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000000032c
-io.gp :          12
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x0000032c
-pcPlus4 : 0x00000330
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x0000032c
-inst : 0x0ff0000f
-rs1_addr :   0
-rs2_addr :  31
-rd_addr :   0
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000000000f
-io.gp :          12
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000330
-pcPlus4 : 0x00000334
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000330
-inst : 0x00100193
-rs1_addr :   0
-rs2_addr :   1
-rd_addr :   3
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000001
-io.gp :          12
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000334
-pcPlus4 : 0x00000338
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000334
-inst : 0x05d00893
-rs1_addr :   0
-rs2_addr :  29
-rd_addr :  17
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000000005d
-io.gp :           1
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000338
-pcPlus4 : 0x0000033c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000338
-inst : 0x00000513
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  10
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
-io.gp :           1
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x0000033c
-pcPlus4 : 0x00000340
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
+pc : 0x0000034c
+  inst : 0x00119193
+idPcReg: 0x00000350
+  idInstReg : 0x00000013
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000034c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000348
+  io.dmem.wData: 0x0000034c
+wbPcReg: 0x00000344
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :          21
+---------
+
+---------
+pc : 0x00000350
+  inst : 0x0011e193
+idPcReg: 0x0000034c
+  idInstReg : 0x00119193
+  rs1Data : 0x00000015
+  rs2Data : 0x00000000
+exPcReg: 0x00000350
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x03
+  rs2Addr : 0x01
+  rdAddr : 0x03
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x0000034c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000348
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x0000034c
+idExStallFlg :  0
+io.gp :          21
+---------
+
+//////// STALL! ////////
+---------
+pc : 0x00000354
+  inst : 0x05d00893
+idPcReg: 0x00000350
+  idInstReg : 0x0011e193
+  rs1Data : 0x00000015
+  rs2Data : 0x00000000
+exPcReg: 0x0000034c
+  exOp1Data : 0x00000015
+  exOp2Data : 0x00000001
+  aluOut : 0x000000000000002a
+ -rs1Addr : 0x03
+  rs2Addr : 0x01
+  rdAddr : 0x03
+  exRdAddr : 0x00000003
+  exWbP : 0x1
+maPcReg: 0x00000350
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x0000034c
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  1
+io.gp :          21
+---------
+
+---------
+pc : 0x00000354
+  inst : 0x05d00893
+idPcReg: 0x00000350
+  idInstReg : 0x0011e193
+  rs1Data : 0x0000002a
+  rs2Data : 0x00000000
+exPcReg: 0x00000350
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x03
+  rs2Addr : 0x01
+  rdAddr : 0x03
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x0000034c
+  io.dmem.wData: 0x0000002a
+wbPcReg: 0x00000350
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :          21
+---------
+
+---------
+pc : 0x00000358
+  inst : 0x00018513
+idPcReg: 0x00000354
+  idInstReg : 0x05d00893
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000350
+  exOp1Data : 0x0000002a
+  exOp2Data : 0x00000001
+  aluOut : 0x000000000000002b
+ -rs1Addr : 0x00
+  rs2Addr : 0x1d
+  rdAddr : 0x11
+  exRdAddr : 0x00000003
+  exWbP : 0x1
+maPcReg: 0x00000350
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x0000034c
+  regFile(0x00000003): 0x00000015
+  wbWbData : 0x0000002a
+idExStallFlg :  0
+io.gp :          21
+---------
+
+---------
+pc : 0x0000035c
+  inst : 0x00000073
+idPcReg: 0x00000358
+  idInstReg : 0x00018513
+  rs1Data : 0x0000002b
+  rs2Data : 0x00000000
+exPcReg: 0x00000354
+  exOp1Data : 0x00000000
+  exOp2Data : 0x0000005d
+  aluOut : 0x000000000000005d
+ -rs1Addr : 0x03
+  rs2Addr : 0x00
+  rdAddr : 0x0a
+  exRdAddr : 0x00000011
+  exWbP : 0x1
+maPcReg: 0x00000350
+  io.dmem.wData: 0x0000002b
+wbPcReg: 0x00000350
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :          42
+---------
+
+---------
+pc : 0x00000360
+  inst : 0x0ff0000f
+idPcReg: 0x0000035c
+  idInstReg : 0x00000073
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000358
+  exOp1Data : 0x0000002b
+  exOp2Data : 0x00000000
+  aluOut : 0x000000000000002b
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x0000000a
+  exWbP : 0x1
+maPcReg: 0x00000354
+  io.dmem.wData: 0x0000005d
+wbPcReg: 0x00000350
+  regFile(0x00000003): 0x0000002a
+  wbWbData : 0x0000002b
+idExStallFlg :  0
+io.gp :          42
+---------
+
+vvvvvvvv ECALL! vvvvvvvv
+---------
+pc : 0x00000364
+  inst : 0x00100193
+idPcReg: 0x00000360
+  idInstReg : 0x0ff0000f
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000035c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x1f
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x6
+maPcReg: 0x00000358
+  io.dmem.wData: 0x0000002b
+wbPcReg: 0x00000354
+  regFile(0x00000011): 0x00000000
+  wbWbData : 0x0000005d
+idExStallFlg :  0
+io.gp :          43
+---------
+
 ECALL!
-ECL_W!
----------
-pc : 0x0000033c
-inst : 0x00000073
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :   0
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000000
-io.gp :           1
-csr[0x340] : 0badbeef
----------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000004
-pcPlus4 : 0x00000008
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-RCS_RS! aluOut:                   11, csrRegFile(imm_i): 0000000b, op1Data: 00000000
-CSR_RS! regFile(rdAddr):           0
-imm_i : 0x342
-imm_z_uext :           0
-wbData :                   11
-csr[0x340] : 0badbeef
 ---------
 pc : 0x00000004
-inst : 0x34202f73
-rs1_addr :   0
-rs2_addr :   2
-rd_addr :  30
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x000000000000000b
-io.gp :           1
-csr[0x340] : 0badbeef
+  inst : 0x34202f73
+idPcReg: 0x00000364
+  idInstReg : 0x00100193
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000360
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x000000000000002b
+ -rs1Addr : 0x00
+  rs2Addr : 0x01
+  rdAddr : 0x03
+  exRdAddr : 0x00000000
+  exWbP : 0x0
+maPcReg: 0x0000035c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000358
+  regFile(0x0000000a): 0x00000000
+  wbWbData : 0x0000002b
+idExStallFlg :  0
+io.gp :          43
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---------
 pc : 0x00000008
-pcPlus4 : 0x0000000c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x00800f93
+idPcReg: 0x00000004
+  idInstReg : 0x34202f73
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000364
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000001
+  aluOut : 0x0000000000000001
+ -rs1Addr : 0x00
+  rs2Addr : 0x02
+  rdAddr : 0x1e
+  exRdAddr : 0x00000003
+  exWbP : 0x1
+maPcReg: 0x00000360
+  io.dmem.wData: 0x0000002b
+wbPcReg: 0x0000035c
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :          43
 ---------
-pc : 0x00000008
-inst : 0x00800f93
-rs1_addr :   0
-rs2_addr :   8
-rd_addr :  31
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000008
-io.gp :           1
-csr[0x340] : 0badbeef
+
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 pc : 0x0000000c
-pcPlus4 : 0x00000010
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
+  inst : 0x03ff0a63
+idPcReg: 0x00000008
+  idInstReg : 0x00800f93
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000004
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x000000000000000b
+ -rs1Addr : 0x00
+  rs2Addr : 0x08
+  rdAddr : 0x1f
+  exRdAddr : 0x0000001e
+  exWbP : 0x5
+maPcReg: 0x00000364
+  io.dmem.wData: 0x00000001
+wbPcReg: 0x00000360
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x0000002b
+idExStallFlg :  0
+io.gp :          43
 ---------
-pc : 0x0000000c
-inst : 0x03ff0a63
-rs1_addr :  30
-rs2_addr :  31
-rd_addr :  20
-rs1Data : 0x0000000b
-rs2Data : 0x00000008
-aluOut : 0x0000000000000010
-io.gp :           1
-csr[0x340] : 0badbeef
+
+//////// STALL! ////////
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 pc : 0x00000010
-pcPlus4 : 0x00000014
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x00900f93
+idPcReg: 0x0000000c
+  idInstReg : 0x03ff0a63
+  rs1Data : 0x0000000b
+  rs2Data : 0x00000000
+exPcReg: 0x00000008
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000008
+  aluOut : 0x0000000000000008
+ -rs1Addr : 0x1e
+  rs2Addr : 0x1f
+  rdAddr : 0x14
+  exRdAddr : 0x0000001f
+  exWbP : 0x1
+maPcReg: 0x00000004
+  io.dmem.wData: 0x0000000b
+wbPcReg: 0x00000364
+  regFile(0x00000003): 0x0000002b
+  wbWbData : 0x00000001
+idExStallFlg :  1
+io.gp :          43
+---------
+
 ---------
 pc : 0x00000010
-inst : 0x00900f93
-rs1_addr :   0
-rs2_addr :   9
-rd_addr :  31
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000000009
+  inst : 0x00900f93
+idPcReg: 0x0000000c
+  idInstReg : 0x03ff0a63
+  rs1Data : 0x0000000b
+  rs2Data : 0x00000008
+exPcReg: 0x0000000c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x1e
+  rs2Addr : 0x1f
+  rdAddr : 0x14
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000008
+  io.dmem.wData: 0x00000008
+wbPcReg: 0x00000004
+  regFile(0x0000001e): 0x00000000
+  wbWbData : 0x0000000b
+idExStallFlg :  0
 io.gp :           1
-csr[0x340] : 0badbeef
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+<<<<<<<< PC change!: 0x0000000000000010 >>>>>>>>
+---------
 pc : 0x00000014
-pcPlus4 : 0x00000018
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
+  inst : 0x03ff0663
+idPcReg: 0x00000010
+  idInstReg : 0x00900f93
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000000c
+  exOp1Data : 0x0000000b
+  exOp2Data : 0x00000008
+  aluOut : 0x0000000000000010
+ -rs1Addr : 0x00
+  rs2Addr : 0x09
+  rdAddr : 0x1f
+  exRdAddr : 0x00000014
+  exWbP : 0x3
+maPcReg: 0x0000000c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000008
+  regFile(0x0000001f): 0x00000000
+  wbWbData : 0x00000008
+idExStallFlg :  0
+io.gp :           1
+---------
+
+---------
+pc : 0x00000010
+  inst : 0x00900f93
+idPcReg: 0x00000014
+  idInstReg : 0x00000013
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000010
+  exOp1Data : 0x0000002b
+  exOp2Data : 0x00000000
+  aluOut : 0x000000000000002b
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x0000000c
+  io.dmem.wData: 0x00000010
+wbPcReg: 0x0000000c
+  regFile(0x00000000): 0x0000002b
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           1
+---------
+
 ---------
 pc : 0x00000014
-inst : 0x03ff0663
-rs1_addr :  30
-rs2_addr :  31
-rd_addr :  12
-rs1Data : 0x0000000b
-rs2Data : 0x00000009
-aluOut : 0x0000000000000018
+  inst : 0x03ff0663
+idPcReg: 0x00000010
+  idInstReg : 0x00900f93
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000014
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x09
+  rdAddr : 0x1f
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000010
+  io.dmem.wData: 0x0000002b
+wbPcReg: 0x0000000c
+  regFile(0x00000014): 0x00000000
+  wbWbData : 0x00000010
+idExStallFlg :  0
 io.gp :           1
-csr[0x340] : 0badbeef
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
 pc : 0x00000018
-pcPlus4 : 0x0000001c
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  inst : 0x00b00f93
+idPcReg: 0x00000014
+  idInstReg : 0x03ff0663
+  rs1Data : 0x0000000b
+  rs2Data : 0x00000008
+exPcReg: 0x00000010
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000009
+  aluOut : 0x0000000000000009
+ -rs1Addr : 0x1e
+  rs2Addr : 0x1f
+  rdAddr : 0x0c
+  exRdAddr : 0x0000001f
+  exWbP : 0x1
+maPcReg: 0x00000014
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000010
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x0000002b
+idExStallFlg :  1
+io.gp :           1
+---------
+
 ---------
 pc : 0x00000018
-inst : 0x00b00f93
-rs1_addr :   0
-rs2_addr :  11
-rd_addr :  31
-rs1Data : 0x00000000
-rs2Data : 0x0bad0000
-aluOut : 0x000000000000000b
+  inst : 0x00b00f93
+idPcReg: 0x00000014
+  idInstReg : 0x03ff0663
+  rs1Data : 0x0000000b
+  rs2Data : 0x00000009
+exPcReg: 0x00000014
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x1e
+  rs2Addr : 0x1f
+  rdAddr : 0x0c
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000010
+  io.dmem.wData: 0x00000009
+wbPcReg: 0x00000014
+  regFile(0x00000000): 0x0000002b
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           1
-csr[0x340] : 0badbeef
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+<<<<<<<< PC change!: 0x0000000000000018 >>>>>>>>
+---------
 pc : 0x0000001c
-pcPlus4 : 0x00000020
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PC_W!
+  inst : 0x03ff0263
+idPcReg: 0x00000018
+  idInstReg : 0x00b00f93
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000014
+  exOp1Data : 0x0000000b
+  exOp2Data : 0x00000009
+  aluOut : 0x0000000000000018
+ -rs1Addr : 0x00
+  rs2Addr : 0x0b
+  rdAddr : 0x1f
+  exRdAddr : 0x0000000c
+  exWbP : 0x3
+maPcReg: 0x00000014
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000010
+  regFile(0x0000001f): 0x00000008
+  wbWbData : 0x00000009
+idExStallFlg :  0
+io.gp :           1
+---------
+
+---------
+pc : 0x00000018
+  inst : 0x00b00f93
+idPcReg: 0x0000001c
+  idInstReg : 0x00000013
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000018
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000014
+  io.dmem.wData: 0x00000018
+wbPcReg: 0x00000014
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           1
+---------
+
 ---------
 pc : 0x0000001c
-inst : 0x03ff0263
-rs1_addr :  30
-rs2_addr :  31
-rd_addr :   4
-rs1Data : 0x0000000b
-rs2Data : 0x0000000b
-aluOut : 0x0000000000000040
+  inst : 0x03ff0263
+idPcReg: 0x00000018
+  idInstReg : 0x00b00f93
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000001c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x0b
+  rdAddr : 0x1f
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000018
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000014
+  regFile(0x0000000c): 0x00000000
+  wbWbData : 0x00000018
+idExStallFlg :  0
 io.gp :           1
-csr[0x340] : 0badbeef
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////// STALL! ////////
+---------
+pc : 0x00000020
+  inst : 0x00000f17
+idPcReg: 0x0000001c
+  idInstReg : 0x03ff0263
+  rs1Data : 0x0000000b
+  rs2Data : 0x00000009
+exPcReg: 0x00000018
+  exOp1Data : 0x00000000
+  exOp2Data : 0x0000000b
+  aluOut : 0x000000000000000b
+ -rs1Addr : 0x1e
+  rs2Addr : 0x1f
+  rdAddr : 0x04
+  exRdAddr : 0x0000001f
+  exWbP : 0x1
+maPcReg: 0x0000001c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000018
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  1
+io.gp :           1
+---------
+
+---------
+pc : 0x00000020
+  inst : 0x00000f17
+idPcReg: 0x0000001c
+  idInstReg : 0x03ff0263
+  rs1Data : 0x0000000b
+  rs2Data : 0x0000000b
+exPcReg: 0x0000001c
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x1e
+  rs2Addr : 0x1f
+  rdAddr : 0x04
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000018
+  io.dmem.wData: 0x0000000b
+wbPcReg: 0x0000001c
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           1
+---------
+
+<<<<<<<< PC change!: 0x0000000000000040 >>>>>>>>
+---------
+pc : 0x00000024
+  inst : 0x354f0f13
+idPcReg: 0x00000020
+  idInstReg : 0x00000f17
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x0000001c
+  exOp1Data : 0x0000000b
+  exOp2Data : 0x0000000b
+  aluOut : 0x0000000000000040
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x1e
+  exRdAddr : 0x00000004
+  exWbP : 0x3
+maPcReg: 0x0000001c
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000018
+  regFile(0x0000001f): 0x00000009
+  wbWbData : 0x0000000b
+idExStallFlg :  0
+io.gp :           1
+---------
+
+---------
 pc : 0x00000040
-pcPlus4 : 0x00000044
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
----------
-pc : 0x00000040
-inst : 0x00001f17
-rs1_addr :   0
-rs2_addr :   0
-rd_addr :  30
-rs1Data : 0x00000000
-rs2Data : 0x00000000
-aluOut : 0x0000000000001040
+  inst : 0x00001f17
+idPcReg: 0x00000024
+  idInstReg : 0x00000013
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000020
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x0000001c
+  io.dmem.wData: 0x00000040
+wbPcReg: 0x0000001c
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
 io.gp :           1
-csr[0x340] : 0badbeef
 ---------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pc : 0x00000044
-pcPlus4 : 0x00000048
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ---------
 pc : 0x00000044
-inst : 0xfc3f2023
-rs1_addr :  30
-rs2_addr :   3
-rd_addr :   0
-rs1Data : 0x00001040
-rs2Data : 0x00000001
-aluOut : 0x0000000000001000
+  inst : 0xfc3f2023
+idPcReg: 0x00000040
+  idInstReg : 0x00001f17
+  rs1Data : 0x00000000
+  rs2Data : 0x00000000
+exPcReg: 0x00000024
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x00
+  rs2Addr : 0x00
+  rdAddr : 0x1e
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000020
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x0000001c
+  regFile(0x00000004): 0x00000000
+  wbWbData : 0x00000040
+idExStallFlg :  0
 io.gp :           1
-csr[0x340] : 0badbeef
 ---------
-test Top Success: 0 tests passed in 163 cycles in 0.249640 seconds 652.94 Hz
+
+//////// STALL! ////////
+---------
+pc : 0x00000048
+  inst : 0xff9ff06f
+idPcReg: 0x00000044
+  idInstReg : 0xfc3f2023
+  rs1Data : 0x0000000b
+  rs2Data : 0x00000001
+exPcReg: 0x00000040
+  exOp1Data : 0x00000040
+  exOp2Data : 0x00001000
+  aluOut : 0x0000000000001040
+ -rs1Addr : 0x1e
+  rs2Addr : 0x03
+  rdAddr : 0x00
+  exRdAddr : 0x0000001e
+  exWbP : 0x1
+maPcReg: 0x00000024
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000020
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  1
+io.gp :           1
+---------
+
+---------
+pc : 0x00000048
+  inst : 0xff9ff06f
+idPcReg: 0x00000044
+  idInstReg : 0xfc3f2023
+  rs1Data : 0x00000000
+  rs2Data : 0x00000001
+exPcReg: 0x00000044
+  exOp1Data : 0x00000000
+  exOp2Data : 0x00000000
+  aluOut : 0x0000000000000000
+ -rs1Addr : 0x1e
+  rs2Addr : 0x03
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x1
+maPcReg: 0x00000040
+  io.dmem.wData: 0x00000000
+wbPcReg: 0x00000024
+  regFile(0x00000000): 0x00000000
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           1
+---------
+
+---------
+pc : 0x0000004c
+  inst : 0x00000093
+idPcReg: 0x00000048
+  idInstReg : 0xff9ff06f
+  rs1Data : 0x0000000b
+  rs2Data : 0x00000000
+exPcReg: 0x00000044
+  exOp1Data : 0x00000000
+  exOp2Data : 0xffffffc0
+  aluOut : 0x00000000ffffffc0
+ -rs1Addr : 0x1f
+  rs2Addr : 0x19
+  rdAddr : 0x00
+  exRdAddr : 0x00000000
+  exWbP : 0x2
+maPcReg: 0x00000044
+  io.dmem.wData: 0x00000001
+wbPcReg: 0x00000040
+  regFile(0x0000001e): 0x0000000b
+  wbWbData : 0x00000000
+idExStallFlg :  0
+io.gp :           1
+---------
+
+test Top Success: 0 tests passed in 145 cycles in 0.326494 seconds 444.11 Hz
 [info] RiscvTest:
 [info] mycpu
 [info] - should work through hex
-[info] Run completed in 3 seconds, 377 milliseconds.
+[info] Run completed in 4 seconds, 168 milliseconds.
 [info] Total number of tests run: 1
 [info] Suites: completed 1, aborted 0
 [info] Tests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0
 [info] All tests passed.
-[success] Total time: 12 s, completed Feb 10, 2022, 3:04:45 PM
+[success] Total time: 11 s, completed Feb 18, 2022, 3:50:20 AM
